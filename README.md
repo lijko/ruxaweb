@@ -7,7 +7,7 @@
 - **le critère RAWeb 13.11** (annulation d'une action au pointeur), absent de la sélection du SIP : évalué à titre indicatif, **hors taux** ;
 - **3 bonnes pratiques** hors RAWeb (taille des cibles, fermeture d'une fenêtre modale, retour du focus), également hors taux.
 
-Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports CSV, Jira, JSON et PDF.
+Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports Excel (liste des critères), CSV (import Jira), JSON et PDF.
 
 - **Même sélection que l'audit simplifié du SIP** : les 52 critères, sur un échantillon de 3 pages au moins (accueil, page avec formulaire, page au contenu particulier). Le taux se lit donc à côté d'un audit simplifié du SIP, sans en être un résultat officiel.
 - **Protocole de test en 4 étapes** : 1. usage standard, 2. code et outils (Axe, inspecteur), 3. lecteur d'écran (3a contenus et structure, 3b formulaires), 4. navigation au clavier. Chaque critère est rattaché à l'étape où on le constate le plus facilement. Séquence construite par RUXAWEB à partir de l'environnement de test et de la méthodologie du RAWeb 1.1 et de la méthode simplifiée du SIP ; ce n'est pas un protocole officiel.
@@ -17,6 +17,7 @@ Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports
 - **Pages testées** : dans un onglet, le panneau « Pages testées » permet de renommer, d'ajouter ou de supprimer (en deux clics) une page en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; une nouvelle page part en NT. L'audit rapide garde au moins 3 pages. Les tickets Jira déjà créés ne sont pas modifiés.
 - **Une page à la fois** : au-delà de 6 pages (outil pensé pour l'ordinateur), la liste n'affiche plus que la page choisie en tête de liste, avec la colonne « Toutes » et le statut d'ensemble de l'onglet sur chaque critère.
 - **Élément concerné** : pour chaque critère non conforme, la notation `Page[type "Libellé"] (état)` (expliquée dans l'Aide) désigne l'élément en cause ; l'export Jira la reprend, avec la référence « RAWeb 1.1, Criterion X.Y » et son lien officiel.
+- **Formats d'export** : Liste des critères en **Excel (.xlsx)** : une ligne par critère et par onglet, colonnes dimensionnées, ligne d'en-tête figée, filtres, statuts colorés, numéros de critères gardés en texte (« 10.10 » reste 10.10). Tickets Jira en **CSV** (séparateur virgule), à importer dans Jira et non à ouvrir dans Excel. Le téléchargement passe uniquement par le navigateur, sans dépendance à une autre application. 
 - **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira : tout réexporter » pour tout reprendre).
 
 RUXAWEB n'est **pas un audit de conformité** et ne produit aucune déclaration d'accessibilité : c'est un outil de pré-diagnostic, qui complète l'audit d'un expert. Il fait partie de la famille RUXAL, avec [RUXAAM](https://github.com/lijko/ruxaam) pour les applications mobiles.

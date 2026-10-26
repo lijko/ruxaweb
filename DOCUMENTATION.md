@@ -73,6 +73,8 @@ L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) /
 
 **Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois. « Tickets Jira : tout réexporter » reprend tous les critères non conformes.
 
+**Formats d'export** : Liste des critères en **Excel (.xlsx)** : une ligne par critère et par onglet, colonnes dimensionnées, ligne d'en-tête figée, filtres, statuts colorés, numéros de critères gardés en texte (« 10.10 » reste 10.10). Tickets Jira en **CSV** (séparateur virgule), à importer dans Jira et non à ouvrir dans Excel. Le téléchargement passe uniquement par le navigateur, sans dépendance à une autre application. 
+
 **Exports** : aucun fichier vide n'est produit. Sans onglet, sans critère testé ou sans critère non conforme, un message explique pourquoi l'export n'a pas lieu. Les sauvegardes RUXAWEB et RUXAAM sont distinctes : une sauvegarde RUXAAM ne s'ouvre pas dans RUXAWEB.
 
 ## 7. Thèmes RUXAL
