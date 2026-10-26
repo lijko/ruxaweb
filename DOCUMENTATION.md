@@ -4,14 +4,14 @@
 RUXAWEB sert à **trier avant d'auditer**. Il ne remplace pas l'audit complet du RAWeb 1.1 (136 critères) : il en retient les 52 de la méthode de contrôle simplifié du SIP, qui suffisent à repérer vite les barrières les plus fréquentes sur un site web, puis il aide à rédiger et prioriser les tickets.
 
 ## 2. Types d'audit
-- **Audit rapide** : les 52 critères sur un échantillon de 3 pages au moins (accueil, page avec formulaire, page au contenu particulier), comme l'audit simplifié du SIP.
+- **Audit rapide** : les 52 critères sur un échantillon de 3 écrans au moins (accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
 - **Fonctionnalité primaire** : menu principal, lien d'évitement, fil d'Ariane, fenêtre modale, formulaire, notification.
 - **Scénario** : parcours complexe, critères + lecture UX.
 
 Chaque onglet garde son propre taux, jamais fusionné avec un autre.
 
 ## 3. Statuts et taux
-Quatre statuts par critère et par page : **C** (conforme), **NC** (non conforme), **NT** (non testé), **NA** (non applicable). Un critère n'est conforme que s'il l'est sur toutes les pages de l'onglet (règle du pire cas). Le taux est calculé sans les NA. La couche POUR et heuristiques UX est qualitative et n'entre pas dans le taux, de même que les bonnes pratiques hors RAWeb.
+Quatre statuts par critère et par écran : **C** (conforme), **NC** (non conforme), **NT** (non testé), **NA** (non applicable). Un critère n'est conforme que s'il l'est sur tous les écrans de l'onglet (règle du pire cas). Le taux est calculé sans les NA. La couche POUR et heuristiques UX est qualitative et n'entre pas dans le taux, de même que les bonnes pratiques hors RAWeb.
 
 ## 4. Sélection des critères
 - Les 52 critères du RAWeb 1.1 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) : 47 testés manuellement et 19 avec l'extension Axe (14 critères des deux façons), soit 52 critères distincts. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
@@ -21,23 +21,23 @@ Quatre statuts par critère et par page : **C** (conforme), **NC** (non conforme
 - Plus 3 bonnes pratiques hors RAWeb (section 9), soit 56 éléments dans l'outil.
 
 ## 5. Règle « si présent »
-24 critères sur 52 ne s'appliquent que si la page contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ».
+24 critères sur 52 ne s'appliquent que si l'écran contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ».
 
-En tête de chaque onglet RAWeb, le panneau **« Contenu des pages »** porte un interrupteur par page et par contenu. Tout est désactivé au départ. Un critère « si présent » ne s'affiche que si au moins une page contient le contenu ; sur une page qui ne le contient pas, il affiche « Absent » et compte comme NA. Rien n'est effacé : réactiver un interrupteur retrouve les statuts et commentaires. Une ligne sous le tableau indique combien de critères restent masqués. Il n'y a pas d'interrupteur global : la limite de temps (13.1) est un critère cœur.
+En tête de chaque onglet RAWeb, le panneau **« Contenu des écrans »** porte un interrupteur par écran et par contenu. Tout est désactivé au départ. Un critère « si présent » ne s'affiche que si au moins un écran contient le contenu ; sur un écran qui ne le contient pas, il affiche « Absent » et compte comme NA. Rien n'est effacé : réactiver un interrupteur retrouve les statuts et commentaires. Une ligne sous le tableau indique combien de critères restent masqués. Il n'y a pas d'interrupteur global : la limite de temps (13.1) est un critère cœur.
 
 | Déclencheur | Le critère s'applique si… | Critères |
 |---|---|---|
-| CAPTCHA | la page contient un CAPTCHA | 1.4, 1.5 |
-| Image complexe | la page contient une image complexe (graphique, schéma, carte, infographie) | 1.6, 1.7 |
-| Média temporel ou son | la page contient un audio, une vidéo, ou un son qui se lance seul | 4.1, 4.2, 4.3, 4.4, 4.10, 4.11 |
-| Média non temporel | la page contient un média non temporel (carte interactive, visite virtuelle, animation ou objet embarqué) | 4.8, 4.9 |
-| Tableau de données | la page contient un tableau de données | 5.6, 5.7 |
-| Cadre (iframe) | la page contient un cadre (iframe : vidéo intégrée, carte, formulaire externe) | 2.1 |
-| Formulaire | la page contient au moins un champ de saisie | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
-| Autre langue | la page contient un passage dans une autre langue que celle de la page | 8.7, 8.8 |
+| CAPTCHA | l'écran contient un CAPTCHA | 1.4, 1.5 |
+| Image complexe | l'écran contient une image complexe (graphique, schéma, carte, infographie) | 1.6, 1.7 |
+| Média temporel ou son | l'écran contient un audio, une vidéo, ou un son qui se lance seul | 4.1, 4.2, 4.3, 4.4, 4.10, 4.11 |
+| Média non temporel | l'écran contient un média non temporel (carte interactive, visite virtuelle, animation ou objet embarqué) | 4.8, 4.9 |
+| Tableau de données | l'écran contient un tableau de données | 5.6, 5.7 |
+| Cadre (iframe) | l'écran contient un cadre (iframe : vidéo intégrée, carte, formulaire externe) | 2.1 |
+| Formulaire | l'écran contient au moins un champ de saisie | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
+| Autre langue | l'écran contient un passage dans une autre langue que celle de la page | 8.7, 8.8 |
 
 ## 6. Protocole de test en 4 étapes
-Un audit rapide se fait en 4 étapes, toujours dans cet ordre, sur les mêmes pages. Chaque critère est rattaché à l'étape où on le constate le plus facilement (pastille « Étape … ») ; on peut répondre au fil des étapes.
+Un audit rapide se fait en 4 étapes, toujours dans cet ordre, sur les mêmes écrans. Chaque critère est rattaché à l'étape où on le constate le plus facilement (pastille « Étape … ») ; on peut répondre au fil des étapes.
 
 1. **Usage standard** (navigateur sans réglage particulier, à la souris) : information portée par la seule couleur, la forme ou la position, contrastes (avec Colour Contrast Analyser), sous-titres et transcriptions, sons et contenus en mouvement, flashs, limites de temps, CAPTCHA.
 2. **Code et outils** : extension Axe (seulement les règles citées par les critères, comme dans la méthode du SIP), puis inspecteur du navigateur et arbre d'accessibilité : alternatives des images, titres des cadres, langue, titre de page, code ARIA, en-têtes des tableaux, zones de la page. Axe trouve des défauts ; il ne prouve pas la conformité.
@@ -54,20 +54,20 @@ Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard
 
 **Support** : sous le nom de l'audit, choisis Ordinateur ou Mobile (un second clic désélectionne). Convention : un audit = un support. Dans l'export Jira, la rubrique « Per context » ne contient que le support choisi (les deux si aucun), et chaque ticket reçoit l'étiquette `desktop` ou `mobile-web`.
 
-**Pages testées** : dans un onglet, le panneau « Pages testées » permet de renommer, d'ajouter ou de supprimer (en deux clics) une page en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; une nouvelle page part en NT. L'audit rapide garde au moins 3 pages. Les tickets Jira déjà créés ne sont pas modifiés.
+**Écrans testés** : dans un onglet, le panneau « Écrans testés » permet de renommer, d'ajouter ou de supprimer (en deux clics) un écran en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; un nouvel écran part en NT. L'audit rapide garde au moins 3 écrans. Les tickets Jira déjà créés ne sont pas modifiés.
 
-**Une page à la fois** : au-delà de 6 pages (outil pensé pour l'ordinateur), la liste n'affiche plus que la page choisie en tête de liste, avec la colonne « Toutes » et le statut d'ensemble de l'onglet sur chaque critère.
+**Un écran à la fois** : au-delà de 6 écrans (outil pensé pour l'ordinateur), la liste n'affiche plus que l'écran choisi dans une barre qui reste visible pendant le défilement (avec Précédent / Suivant et le nombre de non-conformités par écran), plus la colonne « Tous » et le statut d'ensemble de l'onglet sur chaque critère.
 
-**Élément concerné** : sous chaque critère non conforme, pour chaque page concernée, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
+**Élément concerné** : sous chaque critère non conforme, pour chaque écran concerné, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
 
 | Ce que tu désignes | Notation | Exemple |
 |---|---|---|
-| Une page | `Page` | `Produits` |
-| Un élément | `Page[type]` | `Produits[list]` |
-| Un élément avec son libellé | `Page[type "Libellé"]` | `Accueil[button "Connexion"]` |
-| Un élément avec un état | `Page[type "Libellé"] (état)` | `Accueil[button "Valider"] (disabled)` |
-| Un élément commun à toutes les pages | `[type "Libellé"]` | `[link "Aller au contenu"]` |
-| Un parcours | `Page -> Page` | `Accueil -> Produits -> Détail produit` |
+| Un écran | `Écran` | `Produits` |
+| Un élément | `Écran[type]` | `Produits[list]` |
+| Un élément avec son libellé | `Écran[type "Libellé"]` | `Accueil[button "Connexion"]` |
+| Un élément avec un état | `Écran[type "Libellé"] (état)` | `Accueil[button "Valider"] (disabled)` |
+| Un élément commun à tous les écrans | `[type "Libellé"]` | `[link "Aller au contenu"]` |
+| Un parcours | `Écran -> Écran` | `Accueil -> Produits -> Détail produit` |
 
 L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ». La référence du ticket suit le format « RAWeb 1.1, Criterion X.Y: <intitulé officiel> », avec le lien `https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-X-Y`.
 
@@ -85,7 +85,7 @@ Navigation & Structure · Composants Interactifs · Images & Médias · Couleurs
 ## 8. Gravité
 **La gravité n'est pas normative.** Ni le RAWeb ni WCAG 2.x n'en définissent : un critère est conforme ou non. Les niveaux A et AA indiquent l'exigibilité, pas la gêne réelle.
 
-La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la priorité** des tickets. C'est une valeur par défaut par critère, pensée pour un défaut qui touche un élément important de la page. Elle n'entre jamais dans le taux. Les gravités par défaut reprennent celles des critères équivalents de RUXAAM quand il y en a : c'est une **base de discussion**, non relue critère par critère avec les partenaires.
+La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la priorité** des tickets. C'est une valeur par défaut par critère, pensée pour un défaut qui touche un élément important de l'écran. Elle n'entre jamais dans le taux. Les gravités par défaut reprennent celles des critères équivalents de RUXAAM quand il y en a : c'est une **base de discussion**, non relue critère par critère avec les partenaires.
 
 | Niveau | Repère | Priorité Jira |
 |---|---|---|
@@ -106,7 +106,7 @@ Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
 - Pré-diagnostic : ne produit ni déclaration d'accessibilité ni taux de conformité officiel.
 - Même sélection de critères que l'audit simplifié du SIP, mais pas son résultat : l'échantillon, l'environnement de test et l'auditeur diffèrent.
 - La méthode du SIP ne couvre pas tout (voir section 4) : l'audit complet du RAWeb reste la référence.
-- Un critère déjà exporté vers Jira qui devient non conforme sur une autre page n'est pas réexporté automatiquement : utilise « Tickets Jira : tout réexporter » ou complète le ticket existant.
+- Un critère déjà exporté vers Jira qui devient non conforme sur un autre écran n'est pas réexporté automatiquement : utilise « Tickets Jira : tout réexporter » ou complète le ticket existant.
 - Les consignes de test sont des aides de lecture : la méthodologie officielle du RAWeb 1.1 fait foi.
 
 ## 11. Modifier l'outil
