@@ -53,6 +53,10 @@ Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard
 
 **Support** : sous le nom de l'audit, choisis Ordinateur ou Mobile (un second clic désélectionne). Convention : un audit = un support. Dans l'export Jira, la rubrique « Per context » ne contient que le support choisi (les deux si aucun), et chaque ticket reçoit l'étiquette `desktop` ou `mobile-web`.
 
+**Pages testées** : dans un onglet, le panneau « Pages testées » permet de renommer, d'ajouter ou de supprimer (en deux clics) une page en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; une nouvelle page part en NT. L'audit rapide garde au moins 3 pages. Les tickets Jira déjà créés ne sont pas modifiés.
+
+**Une page à la fois** : au-delà de 6 pages (outil pensé pour l'ordinateur), la liste n'affiche plus que la page choisie en tête de liste, avec la colonne « Toutes » et le statut d'ensemble de l'onglet sur chaque critère.
+
 **Élément concerné** : sous chaque critère non conforme, pour chaque page concernée, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
 
 | Ce que tu désignes | Notation | Exemple |

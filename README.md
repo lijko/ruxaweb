@@ -13,6 +13,8 @@ Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports
 - **Vue « Par étape de test »** : la liste d'un onglet RAWeb se range par thème ou par étape, sans effet sur le taux ni les exports.
 - **Support** (Ordinateur ou Mobile) : un audit = un support ; il détermine les recommandations et l'étiquette des tickets Jira.
 - **Contenu des pages** : un interrupteur par page et par type de contenu (CAPTCHA, image complexe, média temporel ou son, média non temporel, tableau de données, cadre, formulaire, autre langue). Un critère « si présent » ne s'affiche que là où le contenu existe ; ailleurs il compte comme NA, sans rien effacer.
+- **Pages testées** : dans un onglet, le panneau « Pages testées » permet de renommer, d'ajouter ou de supprimer (en deux clics) une page en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; une nouvelle page part en NT. L'audit rapide garde au moins 3 pages. Les tickets Jira déjà créés ne sont pas modifiés.
+- **Une page à la fois** : au-delà de 6 pages (outil pensé pour l'ordinateur), la liste n'affiche plus que la page choisie en tête de liste, avec la colonne « Toutes » et le statut d'ensemble de l'onglet sur chaque critère.
 - **Élément concerné** : pour chaque critère non conforme, la notation `Page[type "Libellé"] (état)` (expliquée dans l'Aide) désigne l'élément en cause ; l'export Jira la reprend, avec la référence « RAWeb 1.1, Criterion X.Y » et son lien officiel.
 - **Exports** : jamais de fichier vide ; un message explique pourquoi un export n'a pas lieu. L'outil retient les tickets Jira déjà exportés et ne les exporte pas deux fois (« Tickets Jira : tout réexporter » pour tout reprendre).
 
