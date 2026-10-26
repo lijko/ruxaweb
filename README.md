@@ -4,6 +4,7 @@
 
 - **les 52 critères du RAWeb 1.1** (référentiel du SIP, Luxembourg) retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html), dont 24 « si présent », évalués un à un (conforme, non conforme, non testé, non applicable), qui donnent un **taux de conformité** ;
 - **une lecture UX qualitative** (principes POUR de WCAG et heuristiques d'utilisabilité), **exclue du taux** ;
+- **le critère RAWeb 13.11** (annulation d'une action au pointeur), absent de la sélection du SIP : évalué à titre indicatif, **hors taux** ;
 - **3 bonnes pratiques** hors RAWeb (taille des cibles, fermeture d'une fenêtre modale, retour du focus), également hors taux.
 
 Trois types d'audit : audit rapide, fonctionnalité primaire, scénario. Exports CSV, Jira, JSON et PDF.

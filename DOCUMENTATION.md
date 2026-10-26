@@ -16,8 +16,9 @@ Quatre statuts par critère et par page : **C** (conforme), **NC** (non conforme
 ## 4. Sélection des critères
 - Les 52 critères du RAWeb 1.1 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) : 47 testés manuellement et 19 avec l'extension Axe (14 critères des deux façons), soit 52 critères distincts. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
 - Contrairement à RUXAAM, aucune adaptation : la méthode du SIP est faite pour le web. Le taux de l'audit rapide porte donc sur la même sélection que l'audit simplifié du SIP, sans en être un résultat officiel (échantillon, environnement et auditeur différents).
-- La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), l'adaptation à 320 px (10.11), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1). RUXAWEB ne les ajoute pas, pour garder la même sélection.
-- Plus 3 bonnes pratiques hors RAWeb (section 9), soit 55 éléments dans l'outil.
+- La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), l'adaptation à 320 px (10.11), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1). RUXAWEB ne les ajoute pas au taux, pour garder la même sélection.
+- **Un critère officiel hors sélection, hors taux : 13.11** (annulation d'une action déclenchée au pointeur, WCAG 2.5.2). Il est évalué à titre indicatif, porte la pastille « Hors sélection SIP · hors taux », et ses non-conformités sont exportées vers Jira comme les autres (référence « RAWeb 1.1, Criterion 13.11 »). Il n'entre ni dans le taux, ni dans la complétion, ni dans la conformité par thématique. Son équivalent mobile (RAAM 11.12) compte, lui, dans le taux de RUXAAM.
+- Plus 3 bonnes pratiques hors RAWeb (section 9), soit 56 éléments dans l'outil.
 
 ## 5. Règle « si présent »
 24 critères sur 52 ne s'appliquent que si la page contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ».
@@ -47,7 +48,7 @@ Un critère se constate parfois à plusieurs étapes : l'outil indique l'étape 
 
 Séquence construite par RUXAWEB à partir de l'environnement de test et de la méthodologie du RAWeb 1.1 et de la méthode de contrôle simplifié du SIP ; ce n'est pas un protocole officiel.
 
-Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard : 15 éléments ; 2. Code et outils : 11 ; 3. Lecteur d'écran : 19 ; 4. Navigation au clavier : 10.
+Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard : 16 éléments ; 2. Code et outils : 11 ; 3. Lecteur d'écran : 19 ; 4. Navigation au clavier : 10.
 
 **Vue « Par étape de test »** : dans un onglet RAWeb, le commutateur « Vue : Par thème | Par étape de test » range la liste selon ces étapes, avec un rappel de la consigne en tête de chaque étape. Un critère n'apparaît qu'une fois. Statuts, taux et exports ne changent pas.
 
@@ -91,7 +92,7 @@ La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la p
 | **Modéré** | Difficulté réelle, mais un contournement existe et l'essentiel reste accessible. | Medium |
 | **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Low |
 
-Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur.
+Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur. Le critère hors sélection 13.11 est Modéré.
 
 ## 9. Bonnes pratiques hors RAWeb
 Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
@@ -131,12 +132,13 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 12.8 | A | Modéré | 4 |  | Dans chaque page web, l’ordre de tabulation est-il cohérent ? |
 | 12.9 | A | Critique | 4 |  | Dans chaque page web, la navigation ne doit pas contenir de piège au clavier. Cette règle est-elle respectée ? |
 
-### Composants Interactifs (2)
+### Composants Interactifs (2, plus 13.11 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
 | 12.11 | A | Modéré | 4 |  | Dans chaque page web, les contenus additionnels apparaissant au survol, à la prise de focus ou à l’activation d’un composant d’interface sont-ils si nécessaire atteignables au clavier ? |
 | 13.1 | A | Sérieux | 1 |  | Pour chaque page web, l’utilisateur a-t-il le contrôle de chaque limite de temps modifiant le contenu (hors cas particuliers) ? |
+| 13.11 (hors sélection, hors taux) | A | Modéré | 1 |  | Dans chaque page web, les actions déclenchées au moyen d’un dispositif de pointage sur un point unique de l’écran peuvent-elles faire l’objet d’une annulation (hors cas particuliers) ? |
 
 ### Images & Médias (15)
 
