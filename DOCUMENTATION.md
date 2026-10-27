@@ -11,14 +11,14 @@ RUXAWEB sert à **trier avant d'auditer**. Il ne remplace pas l'audit complet du
 Chaque onglet garde son propre taux, jamais fusionné avec un autre.
 
 ## 3. Statuts et taux
-Quatre statuts par critère et par écran : **C** (conforme), **NC** (non conforme), **NT** (non testé), **NA** (non applicable). Un critère n'est conforme que s'il l'est sur tous les écrans de l'onglet (règle du pire cas). Le taux est calculé sans les NA. La couche POUR et heuristiques UX est qualitative et n'entre pas dans le taux, de même que les bonnes pratiques hors RAWeb.
+Quatre statuts par critère et par écran : **C** (conforme), **NC** (non conforme), **NT** (non testé), **NA** (non applicable). Un critère n'est conforme que s'il l'est sur tous les écrans de l'onglet (règle du pire cas). Le taux est calculé sans les NA. Deux taux, même formule : le **taux sélection SIP** (les 52 critères de la méthode du SIP), taux principal, et le **taux élargi**, qui ajoute les 6 critères hors sélection (section 4). La couche POUR et heuristiques UX est qualitative et n'entre pas dans le taux, de même que les bonnes pratiques hors RAWeb.
 
 ## 4. Sélection des critères
 - Les 52 critères du RAWeb 1.1 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) : 47 testés manuellement et 19 avec l'extension Axe (14 critères des deux façons), soit 52 critères distincts. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
 - Contrairement à RUXAAM, aucune adaptation : la méthode du SIP est faite pour le web. Le taux de l'audit rapide porte donc sur la même sélection que l'audit simplifié du SIP, sans en être un résultat officiel (échantillon, environnement et auditeur différents).
-- La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), l'adaptation à 320 px (10.11), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1). RUXAWEB ne les ajoute pas au taux, pour garder la même sélection.
-- **Un critère officiel hors sélection, hors taux : 13.11** (annulation d'une action déclenchée au pointeur, WCAG 2.5.2). Il est évalué à titre indicatif, porte la pastille « Hors sélection SIP · hors taux », et ses non-conformités sont exportées vers Jira comme les autres (référence « RAWeb 1.1, Criterion 13.11 »). Il n'entre ni dans le taux, ni dans la complétion, ni dans la conformité par thématique. Son équivalent mobile (RAAM 11.12) compte, lui, dans le taux de RUXAAM.
-- Plus 3 bonnes pratiques hors RAWeb (section 9), soit 56 éléments dans l'outil.
+- La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), l'adaptation à 320 px (10.11), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1). Depuis la version 1.7, RUXAWEB en ajoute cinq (3.3, 7.1, 7.5, 9.3, 10.4) : ils comptent dans le taux élargi, pas dans le taux sélection SIP.
+- **Six critères officiels hors sélection : 3.3, 7.1, 7.5, 9.3, 10.4 et 13.11.** Ils portent la pastille « Hors sélection SIP · taux élargi », comptent dans le taux élargi et sont exportés vers Jira comme les autres. Ils n'entrent ni dans le taux sélection SIP, ni dans sa complétion, ni dans la conformité par thématique.
+- Plus 3 bonnes pratiques hors RAWeb (section 9), soit 61 éléments dans l'outil.
 
 ## 5. Règle « si présent »
 24 critères sur 52 ne s'appliquent que si l'écran contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ».
@@ -48,7 +48,7 @@ Un critère se constate parfois à plusieurs étapes : l'outil indique l'étape 
 
 Séquence construite par RUXAWEB à partir de l'environnement de test et de la méthodologie du RAWeb 1.1 et de la méthode de contrôle simplifié du SIP ; ce n'est pas un protocole officiel.
 
-Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard : 16 éléments ; 2. Code et outils : 11 ; 3. Lecteur d'écran : 19 ; 4. Navigation au clavier : 10.
+Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard : 18 éléments ; 2. Code et outils : 11 ; 3. Lecteur d'écran : 22 ; 4. Navigation au clavier : 10.
 
 **Vue « Par étape de test »** : dans un onglet RAWeb, le commutateur « Vue : Par thème | Par étape de test » range la liste selon ces étapes, avec un rappel de la consigne en tête de chaque étape. Un critère n'apparaît qu'une fois. Statuts, taux et exports ne changent pas.
 
@@ -94,7 +94,7 @@ La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la p
 | **Modéré** | Difficulté réelle, mais un contournement existe et l'essentiel reste accessible. | Medium |
 | **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Low |
 
-Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur. Le critère hors sélection 13.11 est Modéré.
+Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5 et 10.4 Sérieux ; 9.3 et 13.11 Modéré.
 
 ## 9. Bonnes pratiques hors RAWeb
 Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
@@ -112,10 +112,10 @@ Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
 ## 11. Modifier l'outil
 Tout est dans `ruxaweb.html` : les critères et leurs textes se trouvent dans le bloc délimité par `DEBUT_DONNEES` et `FIN_DONNEES`, généré depuis le dépôt de développement (<https://github.com/lijko/ruxal-a11y>). Ne modifiez jamais le numéro, l'intitulé ni le niveau d'un critère officiel.
 
-## 12. Les 52 critères
+## 12. Les 58 critères (52 de la sélection SIP, 6 hors sélection)
 Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU. Thèmes (regroupement), gravités et étapes : RUXAWEB.
 
-### Navigation & Structure (14)
+### Navigation & Structure (14, plus 9.3 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -133,14 +133,17 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 12.7 | A | Modéré | 4 |  | Dans chaque page web, un lien d’évitement ou d’accès rapide à la zone de contenu principal est-il présent (hors cas particuliers) ? |
 | 12.8 | A | Modéré | 4 |  | Dans chaque page web, l’ordre de tabulation est-il cohérent ? |
 | 12.9 | A | Critique | 4 |  | Dans chaque page web, la navigation ne doit pas contenir de piège au clavier. Cette règle est-elle respectée ? |
+| 9.3 (hors sélection, taux élargi) | A | Modéré | 3a |  | Dans chaque page web, chaque liste est-elle correctement structurée ? |
 
-### Composants Interactifs (2, plus 13.11 hors sélection)
+### Composants Interactifs (2, plus 7.1, 7.5 et 13.11 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
 | 12.11 | A | Modéré | 4 |  | Dans chaque page web, les contenus additionnels apparaissant au survol, à la prise de focus ou à l’activation d’un composant d’interface sont-ils si nécessaire atteignables au clavier ? |
 | 13.1 | A | Sérieux | 1 |  | Pour chaque page web, l’utilisateur a-t-il le contrôle de chaque limite de temps modifiant le contenu (hors cas particuliers) ? |
-| 13.11 (hors sélection, hors taux) | A | Modéré | 1 |  | Dans chaque page web, les actions déclenchées au moyen d’un dispositif de pointage sur un point unique de l’écran peuvent-elles faire l’objet d’une annulation (hors cas particuliers) ? |
+| 13.11 (hors sélection, taux élargi) | A | Modéré | 1 |  | Dans chaque page web, les actions déclenchées au moyen d’un dispositif de pointage sur un point unique de l’écran peuvent-elles faire l’objet d’une annulation (hors cas particuliers) ? |
+| 7.1 (hors sélection, taux élargi) | A | Critique | 3a |  | Chaque script est-il, si nécessaire, compatible avec les technologies d’assistance ? |
+| 7.5 (hors sélection, taux élargi) | AA | Sérieux | 3a |  | Dans chaque page web, les messages de statut sont-ils correctement restitués par les technologies d’assistance ? |
 
 ### Images & Médias (15)
 
@@ -162,7 +165,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 4.10 | A | Sérieux | 1 | Média temporel ou son | Chaque son déclenché automatiquement est-il contrôlable par l’utilisateur ? |
 | 4.11 | A | Sérieux | 4 | Média temporel ou son | La consultation de chaque média temporel est-elle, si nécessaire, contrôlable par le clavier et tout dispositif de pointage ? |
 
-### Couleurs & Contrastes (4)
+### Couleurs & Contrastes (4, plus 3.3 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -170,8 +173,9 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 3.2 | AA | Sérieux | 1 |  | Dans chaque page web, le contraste entre la couleur du texte et la couleur de son arrière-plan est-il suffisamment élevé (hors cas particuliers) ? |
 | 10.9 | A | Modéré | 1 |  | Dans chaque page web, l’information ne doit pas être donnée uniquement par la forme, taille ou position. Cette règle est-elle respectée ? |
 | 10.10 | A | Modéré | 3a |  | Dans chaque page web, l’information ne doit pas être donnée par la forme, taille ou position uniquement. Cette règle est-elle implémentée de façon pertinente ? |
+| 3.3 (hors sélection, taux élargi) | AA | Sérieux | 1 |  | Dans chaque page web, les couleurs utilisées dans les composants d’interface ou les éléments graphiques porteurs d’informations sont-elles suffisamment contrastées (hors cas particuliers) ? |
 
-### Contenu & Lisibilité (4)
+### Contenu & Lisibilité (4, plus 10.4 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -179,6 +183,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 5.7 | A | Sérieux | 2 | Tableau de données | Pour chaque tableau de données, la technique appropriée permettant d’associer chaque cellule avec ses en-têtes est-elle utilisée (hors cas particuliers) ? |
 | 13.7 | A | Critique | 1 |  | Dans chaque page web, les changements brusques de luminosité ou les effets de flash sont-ils correctement utilisés ? |
 | 13.8 | A | Sérieux | 1 |  | Dans chaque page web, chaque contenu en mouvement ou clignotant est-il contrôlable par l’utilisateur (hors cas particuliers) ? |
+| 10.4 (hors sélection, taux élargi) | AA | Sérieux | 1 |  | Dans chaque page web, le texte reste-t-il lisible lorsque la taille des caractères est augmentée jusqu’à 200 %, au moins (hors cas particuliers) ? |
 
 ### Fondations Techniques (6)
 
