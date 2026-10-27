@@ -1,6 +1,6 @@
 # RUXAWEB : Revue UX Accessibilité (web)
 
-> **Nouveau : RUXAWEB 2.0** (`ruxaweb-2.html`), audit par observations : on note des constats, la grille des critères se remplit. Parcours guidé écran par écran (tour à vide, 4 étapes, clôture), aide toujours au même endroit, constats valables sur plusieurs écrans, retest, deux taux. Mêmes critères et même taux que la 1.7, qui reste dans `ruxaweb.html`. Voir la section 13 de `DOCUMENTATION.md`.
+> **Nouveau : RUXAWEB 2.0** (`ruxaweb-2.html`), audit par observations : on note des constats, la grille des critères se remplit. Parcours guidé écran par écran (tour à vide, 4 étapes, clôture), aide toujours au même endroit, constats valables sur plusieurs écrans, retest, deux taux, import de rapports axe ou Lighthouse. Mêmes critères et même taux que la 1.7, qui reste dans `ruxaweb.html`. Voir la section 13 de `DOCUMENTATION.md`.
 
 **FR** : Outil HTML autonome (un seul fichier, hors ligne) qui aide à **préparer et prioriser un audit d'accessibilité de site web**, avant l'audit complet. Il croise :
 

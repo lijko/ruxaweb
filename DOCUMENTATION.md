@@ -218,4 +218,5 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 - **Retest** : depuis la grille, un critère se remet à NT sur un écran ; les observations précédentes restent visibles, barrées.
 - **Clôture** : la liste des critères encore sans statut, à trancher un par un ; une non-conformité y demande un constat.
 - **Exports** (menu Fichier) : grille Excel, un ticket Jira par constat non conforme (un seul pour un constat partagé), sauvegarde. Les sauvegardes de la 1.x ne s'ouvrent pas dans la 2.0.
-- **Pas encore repris** : lecture POUR/UX, import Lighthouse ou axe, PDF du référentiel.
+- **Import axe ou Lighthouse** : bouton « Importer axe ou Lighthouse » sur l'écran en cours. Rapport JSON d'axe-core, ou rapport Lighthouse enregistré en JSON depuis les outils de développement d'Edge ou de Chrome. Les échecs et les points à vérifier deviennent des pistes, jamais des statuts : « Reprendre » les place dans le formulaire d'observation, « Écarter » les retire. Une règle réussie ne prouve pas la conformité. Lighthouse teste l'écran dans l'état où il est : pour une fenêtre ouverte ou un formulaire en erreur, relance le rapport dans cet état.
+- **Pas encore repris** : lecture POUR/UX, PDF du référentiel.
