@@ -211,12 +211,12 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 ## 13. RUXAWEB 2.0 : audit par observations
 `ruxaweb-2.html` reprend les mêmes critères, textes et règles de taux que la 1.7, mais inverse la saisie : l'auditeur note ce qu'il constate, et la grille se remplit.
 
-- **Observation** : un constat, un tag (#c conforme, #nc non conforme, #na non applicable) et les critères concernés, proposés à partir d'un point de contrôle. Sans critère, c'est une note libre, sans effet sur les statuts.
+- **Observation** : ce que l'auditeur a vu, entendu ou atteint, un tag (#c conforme, #nc non conforme, #na non applicable) et les critères concernés, proposés à partir d'un point de contrôle. Sans critère, c'est une note libre, sans effet sur les statuts.
 - **Parcours** : préparer les écrans (nom et contenus), puis pour chaque écran le tour à vide et les 4 étapes de test, puis la clôture et le résumé. Le panneau d'aide, à droite, montre ce parcours et dit quoi faire et quoi chercher à l'étape en cours.
 - **Statuts** : un critère sans observation reste NT ; le pire statut l'emporte ; un contenu absent rend ses critères « si présent » non applicables.
 - **Aussi ailleurs** : « Partout » (même élément sur plusieurs écrans) : un #nc vaut NC sur les écrans cochés, un #c y reste à confirmer. « Composant » (même composant, autre contenu) : seuls les critères de mécanique se propagent. Un élément partagé n'a pas de statut propre, le taux reste comparable à celui du SIP.
 - **Retest** : depuis la grille, un critère se remet à NT sur un écran ; les observations précédentes restent visibles, barrées.
-- **Clôture** : la liste des critères encore sans statut, à trancher un par un ; une non-conformité y demande un constat.
-- **Exports** (menu Fichier) : grille Excel, un ticket Jira par constat non conforme (un seul pour un constat partagé), sauvegarde. Les sauvegardes de la 1.x ne s'ouvrent pas dans la 2.0.
+- **Clôture** : la liste des critères encore sans statut, à trancher un par un ; une non-conformité y demande une observation.
+- **Exports** (menu Fichier) : grille Excel, un ticket Jira par observation non conforme (un seul pour une observation partagée), sauvegarde. Les sauvegardes de la 1.x ne s'ouvrent pas dans la 2.0.
 - **Import axe ou Lighthouse** : bouton « Importer axe ou Lighthouse » sur l'écran en cours. Rapport JSON d'axe-core, ou rapport Lighthouse enregistré en JSON depuis les outils de développement d'Edge ou de Chrome. Les échecs et les points à vérifier deviennent des pistes, jamais des statuts : « Reprendre » les place dans le formulaire d'observation, « Écarter » les retire. Une règle réussie ne prouve pas la conformité. Lighthouse teste l'écran dans l'état où il est : pour une fenêtre ouverte ou un formulaire en erreur, relance le rapport dans cet état.
 - **Pas encore repris** : lecture POUR/UX, PDF du référentiel.
