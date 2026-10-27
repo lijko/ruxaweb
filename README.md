@@ -1,5 +1,7 @@
 # RUXAWEB : Revue UX Accessibilité (web)
 
+> **Nouveau : RUXAWEB 2.0** (`ruxaweb-2.html`), audit par observations : on note des constats, la grille des critères se remplit. Parcours guidé écran par écran (tour à vide, 4 étapes, clôture), aide toujours au même endroit, constats valables sur plusieurs écrans, retest, deux taux. Mêmes critères et même taux que la 1.7, qui reste dans `ruxaweb.html`. Voir la section 13 de `DOCUMENTATION.md`.
+
 **FR** : Outil HTML autonome (un seul fichier, hors ligne) qui aide à **préparer et prioriser un audit d'accessibilité de site web**, avant l'audit complet. Il croise :
 
 - **les 52 critères du RAWeb 1.1** (référentiel du SIP, Luxembourg) retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html), dont 24 « si présent », évalués un à un (conforme, non conforme, non testé, non applicable), qui donnent un **taux de conformité** ;
