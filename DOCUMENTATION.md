@@ -45,7 +45,7 @@ Dans « Préparer les écrans », un interrupteur par écran et par contenu indi
 Le panneau Parcours, fixe et toujours au même endroit, montre l'étape en cours, avec les boutons Précédente et Suivante ; « Voir toutes les étapes » déplie la liste complète (dépliée par défaut sur le tableau de bord, l'outil retient ton choix). Il dit quoi faire et quoi chercher à l'étape en cours.
 
 1. **Préparer les écrans** : noms et contenus.
-2. **Pour chaque écran** : un **tour à vide** (sans outil, pour comprendre l'écran), puis les 4 étapes de test ci-dessous.
+2. **Étape par étape, sur tous les écrans** : un **tour à vide** (sans outil, pour comprendre les écrans), puis les 4 étapes de test ci-dessous. Chaque étape se fait sur tous les écrans avant de passer à la suivante : on règle l'outil une seule fois (zoom, lecteur d'écran) et on repère tôt les éléments répétés. « Fait sur cet écran » passe à l'écran suivant, puis à l'étape suivante ; la colonne des écrans coche ceux déjà faits pour l'étape en cours. La navigation reste libre : on peut changer d'écran ou d'étape à tout moment, par exemple pour un écran accessible peu de temps.
 3. **Lecture POUR/UX** (scénarios seulement) : 8 questions sur le parcours entier, Succès, Difficile, Échec ou N/A, avec un commentaire si difficile ou échec. Le score (succès sur réponses hors N/A) est affiché à part et n'entre jamais dans le taux.
 4. **Clôture** : un critère à la fois, avec sa fiche (niveau, comment vérifier, impact, lien officiel, observations), puis le statut de chaque écran encore sans statut (C, NC avec une observation, NA). « Conforme sur les N écrans » existe, mais critère par critère, pour éviter de tout valider en série.
 5. **Résumé et exports**.
