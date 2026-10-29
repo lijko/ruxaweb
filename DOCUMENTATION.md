@@ -212,6 +212,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 `ruxaweb-2.html` reprend les mêmes critères, textes et règles de taux que la 1.7, mais inverse la saisie : l'auditeur note ce qu'il constate, et la grille se remplit.
 
 - **Observation** : ce que l'auditeur a vu, entendu ou atteint, un tag (#c conforme, #nc non conforme, #na non applicable) et les critères concernés, proposés à partir d'un point de contrôle. Sans critère, c'est une note libre, sans effet sur les statuts.
+- **Navigation** : en haut, le nom de l'audit et le menu Fichier, puis la ligne des onglets de l'audit avec leur état. Dans un onglet, deux vues seulement : Saisie (les observations) et Grille (les critères). Les étapes (clôture, lecture POUR/UX, résumé) s'ouvrent depuis le parcours, dans l'aide.
 - **Parcours** : préparer les écrans (nom et contenus), puis pour chaque écran le tour à vide et les 4 étapes de test, puis la clôture et le résumé. Le panneau d'aide, à droite, montre ce parcours et dit quoi faire et quoi chercher à l'étape en cours.
 - **Statuts** : un critère sans observation reste NT ; le pire statut l'emporte ; un contenu absent rend ses critères « si présent » non applicables.
 \1 Un même élément écrit avec une casse, des accents ou des espaces différents est reconnu comme le même.\n- **Scénario** : un champ « Transition vers » note une observation sur le passage d'un écran à l'autre, notée Écran -> Écran dans l'observation et dans le ticket Jira.
