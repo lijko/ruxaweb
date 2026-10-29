@@ -42,7 +42,7 @@ Dans « Préparer les écrans », un interrupteur par écran et par contenu indi
 | Autre langue | l'écran contient un passage dans une autre langue que celle de la page | 8.7, 8.8 |
 
 ## 6. Parcours d'audit
-Le panneau d'aide, toujours au même endroit, montre le parcours et dit quoi faire et quoi chercher à l'étape en cours.
+Le panneau Parcours, fixe et toujours au même endroit, montre les étapes et dit quoi faire et quoi chercher à l'étape en cours.
 
 1. **Préparer les écrans** : noms et contenus.
 2. **Pour chaque écran** : un **tour à vide** (sans outil, pour comprendre l'écran), puis les 4 étapes de test ci-dessous.
