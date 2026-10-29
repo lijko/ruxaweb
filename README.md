@@ -7,7 +7,7 @@
 - **3 bonnes pratiques** hors RAWeb (taille des cibles, fermeture d'une fenêtre modale, retour du focus), hors taux ;
 - pour les scénarios, **une lecture POUR/UX** qualitative, **exclue du taux**.
 
-Deux types d'audit : audit rapide (3 écrans au moins, comme l'audit simplifié du SIP) et scénario. Parcours guidé étape par étape, chaque étape sur tous les écrans (tour à vide, 4 étapes de test, clôture), panneau Parcours toujours au même endroit, observations valables sur plusieurs écrans, retest, import de rapports axe ou Lighthouse. Exports Excel (grille des critères), CSV (import Jira) et JSON.
+Un projet A11Y, deux modules : audit simple (3 à 5 écrans, comme l'audit simplifié du SIP ; audit complet à venir) et scénario, avec un configurateur de fonctions primaires commun au projet. Parcours guidé étape par étape, chaque étape sur tous les écrans (tour à vide, 4 étapes de test, clôture), panneau Parcours toujours au même endroit, observations valables sur plusieurs écrans, retest, import de rapports axe ou Lighthouse. Exports Excel (grille des critères), CSV (import Jira) et JSON.
 
 RUXAWEB n'est **pas un audit de conformité** et ne produit aucune déclaration d'accessibilité : c'est un outil de pré-diagnostic, qui complète l'audit d'un expert. Il fait partie de la famille RUXAL, avec [RUXAAM](https://github.com/lijko/ruxaam) pour les applications mobiles.
 
