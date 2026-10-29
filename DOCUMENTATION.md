@@ -3,27 +3,32 @@
 ## 1. Principe
 RUXAWEB sert à **trier avant d'auditer**. Il ne remplace pas l'audit complet du RAWeb 1.1 (136 critères) : il en retient les 52 de la méthode de contrôle simplifié du SIP, qui suffisent à repérer vite les barrières les plus fréquentes sur un site web, puis il aide à rédiger et prioriser les tickets.
 
+L'audit se fait **par observations** : l'auditeur note ce qu'il constate, et la grille des critères se remplit.
+
 ## 2. Types d'audit
 - **Audit rapide** : les 52 critères sur un échantillon de 3 écrans au moins (accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
-- **Fonctionnalité primaire** : menu principal, lien d'évitement, fil d'Ariane, fenêtre modale, formulaire, notification.
-- **Scénario** : parcours complexe, critères + lecture UX.
+- **Scénario** : un parcours, écran par écran, avec en plus la lecture POUR/UX (section 6).
 
 Chaque onglet garde son propre taux, jamais fusionné avec un autre.
 
-## 3. Statuts et taux
-Quatre statuts par critère et par écran : **C** (conforme), **NC** (non conforme), **NT** (non testé), **NA** (non applicable). Un critère n'est conforme que s'il l'est sur tous les écrans de l'onglet (règle du pire cas). Le taux est calculé sans les NA. Deux taux, même formule : le **taux sélection SIP** (les 52 critères de la méthode du SIP), taux principal, et le **taux élargi**, qui ajoute les 6 critères hors sélection (section 4). La couche POUR et heuristiques UX est qualitative et n'entre pas dans le taux, de même que les bonnes pratiques hors RAWeb.
+## 3. Observations, statuts et taux
+- **Observation** : ce que l'auditeur a vu, entendu ou atteint, un tag (#c conforme, #nc non conforme, #na non applicable) et les critères concernés, proposés à partir d'un point de contrôle. Sans critère, c'est une note libre, sans effet sur les statuts.
+- **Statuts** : quatre statuts par critère et par écran, **C**, **NC**, **NT** (non testé), **NA**. Un critère sans observation reste NT ; le pire statut l'emporte (NC, puis C). Un critère n'est conforme pour l'onglet que s'il l'est sur tous ses écrans.
+- **Élément et écrans concernés** : deux champs ordinaires de toute observation. L'écran en cours est toujours coché ; l'auditeur coche les autres écrans où l'observation est vraie et peut nommer l'élément (ex. Menu principal). Un élément observé sur au moins deux écrans figure dans la liste « Éléments répétés ». Un #nc vaut NC sur les écrans cochés, un #c y reste à confirmer. Une observation n'a jamais de statut propre : le taux reste comparable à celui du SIP. Un même élément écrit avec une casse, des accents ou des espaces différents est reconnu comme le même.
+- **Retest** : depuis la grille, un critère se remet à NT sur un écran ; les observations précédentes restent visibles, barrées.
+- **Taux** : calculé sans les NA. Deux taux, même formule : le **taux sélection SIP** (les 52 critères de la méthode du SIP), taux principal, et le **taux élargi**, qui ajoute les 6 critères hors sélection (section 4). La lecture POUR/UX et les bonnes pratiques hors RAWeb n'entrent pas dans le taux.
 
 ## 4. Sélection des critères
 - Les 52 critères du RAWeb 1.1 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) : 47 testés manuellement et 19 avec l'extension Axe (14 critères des deux façons), soit 52 critères distincts. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
 - Contrairement à RUXAAM, aucune adaptation : la méthode du SIP est faite pour le web. Le taux de l'audit rapide porte donc sur la même sélection que l'audit simplifié du SIP, sans en être un résultat officiel (échantillon, environnement et auditeur différents).
-- La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), l'adaptation à 320 px (10.11), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1). Depuis la version 1.7, RUXAWEB en ajoute cinq (3.3, 7.1, 7.5, 9.3, 10.4) : ils comptent dans le taux élargi, pas dans le taux sélection SIP.
-- **Six critères officiels hors sélection : 3.3, 7.1, 7.5, 9.3, 10.4 et 13.11.** Ils portent la pastille « Hors sélection SIP · taux élargi », comptent dans le taux élargi et sont exportés vers Jira comme les autres. Ils n'entrent ni dans le taux sélection SIP, ni dans sa complétion, ni dans la conformité par thématique.
-- Plus 3 bonnes pratiques hors RAWeb (section 9), soit 61 éléments dans l'outil.
+- La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1).
+- **Six critères officiels hors sélection : 3.3, 7.1, 7.5, 9.3, 10.4 et 13.11.** Ils comptent dans le taux élargi et sont exportés vers Jira comme les autres. Ils n'entrent ni dans le taux sélection SIP, ni dans sa complétion.
+- Plus 3 bonnes pratiques hors RAWeb (section 10), soit 61 éléments dans l'outil.
 
 ## 5. Règle « si présent »
-24 critères sur 52 ne s'appliquent que si l'écran contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous, indiqué par la pastille « Si présent · <déclencheur> ».
+24 critères sur 52 ne s'appliquent que si l'écran contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous.
 
-En tête de chaque onglet RAWeb, le panneau **« Contenu des écrans »** porte un interrupteur par écran et par contenu. Tout est désactivé au départ. Un critère « si présent » ne s'affiche que si au moins un écran contient le contenu ; sur un écran qui ne le contient pas, il affiche « Absent » et compte comme NA. Rien n'est effacé : réactiver un interrupteur retrouve les statuts et commentaires. Une ligne sous le tableau indique combien de critères restent masqués. Il n'y a pas d'interrupteur global : la limite de temps (13.1) est un critère cœur.
+Dans « Préparer les écrans », un interrupteur par écran et par contenu indique ce que contient l'écran. Tout est désactivé au départ. Sur un écran qui ne contient pas le contenu, les critères concernés comptent comme NA. Rien n'est effacé : réactiver un interrupteur retrouve les observations. Il n'y a pas d'interrupteur global : la limite de temps (13.1) est un critère cœur.
 
 | Déclencheur | Le critère s'applique si… | Critères |
 |---|---|---|
@@ -36,8 +41,16 @@ En tête de chaque onglet RAWeb, le panneau **« Contenu des écrans »** porte 
 | Formulaire | l'écran contient au moins un champ de saisie | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
 | Autre langue | l'écran contient un passage dans une autre langue que celle de la page | 8.7, 8.8 |
 
-## 6. Protocole de test en 4 étapes
-Un audit rapide se fait en 4 étapes, toujours dans cet ordre, sur les mêmes écrans. Chaque critère est rattaché à l'étape où on le constate le plus facilement (pastille « Étape … ») ; on peut répondre au fil des étapes.
+## 6. Parcours d'audit
+Le panneau d'aide, toujours au même endroit, montre le parcours et dit quoi faire et quoi chercher à l'étape en cours.
+
+1. **Préparer les écrans** : noms et contenus.
+2. **Pour chaque écran** : un **tour à vide** (sans outil, pour comprendre l'écran), puis les 4 étapes de test ci-dessous.
+3. **Lecture POUR/UX** (scénarios seulement) : 8 questions sur le parcours entier, Succès, Difficile, Échec ou N/A, avec un commentaire si difficile ou échec. Le score (succès sur réponses hors N/A) est affiché à part et n'entre jamais dans le taux.
+4. **Clôture** : un critère à la fois, avec sa fiche (niveau, comment vérifier, impact, lien officiel, observations), puis le statut de chaque écran encore sans statut (C, NC avec une observation, NA). « Conforme sur les N écrans » existe, mais critère par critère, pour éviter de tout valider en série.
+5. **Résumé et exports**.
+
+Les 4 étapes de test, toujours dans cet ordre :
 
 1. **Usage standard** (navigateur sans réglage particulier, à la souris) : information portée par la seule couleur, la forme ou la position, contrastes (avec Colour Contrast Analyser), sous-titres et transcriptions, sons et contenus en mouvement, flashs, limites de temps, CAPTCHA.
 2. **Code et outils** : inspecteur du navigateur (clic droit, Inspecter) pour ce qui ne se voit pas à l'écran : alternatives des images, titres des cadres, langue, titre de page, en-têtes des tableaux, zones de la page. Un outil de test automatique gratuit (une extension de navigateur, Axe par exemple) aide à repérer vite certains défauts, en appoint : il ne remplace pas la vérification et ne prouve jamais la conformité. Les consignes « Comment vérifier » de l'outil n'en dépendent pas.
@@ -50,39 +63,20 @@ Séquence construite par RUXAWEB à partir de l'environnement de test et de la m
 
 Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard : 18 éléments ; 2. Code et outils : 11 ; 3. Lecteur d'écran : 22 ; 4. Navigation au clavier : 10.
 
-**Vue « Par étape de test »** : dans un onglet RAWeb, le commutateur « Vue : Par thème | Par étape de test » range la liste selon ces étapes, avec un rappel de la consigne en tête de chaque étape. Un critère n'apparaît qu'une fois. Statuts, taux et exports ne changent pas.
+**Scénario** : un champ « Transition vers » note une observation sur le passage d'un écran à l'autre, notée Écran -> Écran dans l'observation et dans le ticket Jira.
 
-**Support** : sous le nom de l'audit, choisis Ordinateur ou Mobile (un second clic désélectionne). Convention : un audit = un support. Dans l'export Jira, la rubrique « Per context » ne contient que le support choisi (les deux si aucun), et chaque ticket reçoit l'étiquette `desktop` ou `mobile-web`.
+## 7. Interface, import et exports
+- **En-tête** : le nom de l'audit, le **support** (Ordinateur ou Mobile, un audit = un support) et le menu Fichier, puis les onglets de l'audit avec leur état. Dans un onglet, deux vues : Saisie (les observations) et Grille (les critères, par thématique RAWeb ou par thème RUXAL).
+- **Import axe ou Lighthouse** : bouton « Importer axe ou Lighthouse » sur l'écran en cours. Rapport JSON d'axe-core, ou rapport Lighthouse enregistré en JSON depuis les outils de développement d'Edge ou de Chrome. Les échecs et les points à vérifier deviennent des pistes, jamais des statuts : « Reprendre » les place dans le formulaire d'observation, « Écarter » les retire. Une règle réussie ne prouve pas la conformité. La correspondance des règles avec les critères a été relue contre la documentation officielle d'axe-core. Lighthouse teste l'écran dans l'état où il est : pour une fenêtre ouverte ou un formulaire en erreur, relance le rapport dans cet état.
+- **Exports** (menu Fichier) : grille Excel (avec la lecture POUR/UX pour un scénario), un ticket Jira par observation non conforme (un seul pour une observation qui vaut sur plusieurs écrans), sauvegarde JSON. Chaque ticket reçoit l'étiquette `desktop` ou `mobile-web` selon le support. Référence : « RAWeb 1.1, Criterion X.Y: <intitulé officiel> », avec le lien `https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-X-Y`. Aucun fichier vide n'est produit : un message explique pourquoi un export n'a pas lieu.
+- Les sauvegardes RUXAWEB et RUXAAM sont distinctes : une sauvegarde RUXAAM ne s'ouvre pas dans RUXAWEB.
 
-**Écrans testés** : dans un onglet, le panneau « Écrans testés » permet de renommer, d'ajouter ou de supprimer (en deux clics) un écran en cours d'audit. Un ajout ou une suppression repasse l'onglet en brouillon ; un nouvel écran part en NT. L'audit rapide garde au moins 3 écrans. Les tickets Jira déjà créés ne sont pas modifiés.
-
-**Un écran à la fois** : au-delà de 6 écrans (outil pensé pour l'ordinateur), la liste n'affiche plus que l'écran choisi dans une barre qui reste visible pendant le défilement (avec Précédent / Suivant et le nombre de non-conformités par écran), plus la colonne « Tous » et le statut d'ensemble de l'onglet sur chaque critère.
-
-**Élément concerné** : sous chaque critère non conforme, pour chaque écran concerné, un champ d'une ligne désigne l'élément en cause avec une notation simple, détaillée dans l'Aide (« Noter les éléments ») :
-
-| Ce que tu désignes | Notation | Exemple |
-|---|---|---|
-| Un écran | `Écran` | `Produits` |
-| Un élément | `Écran[type]` | `Produits[list]` |
-| Un élément avec son libellé | `Écran[type "Libellé"]` | `Accueil[button "Connexion"]` |
-| Un élément avec un état | `Écran[type "Libellé"] (état)` | `Accueil[button "Valider"] (disabled)` |
-| Un élément commun à tous les écrans | `[type "Libellé"]` | `[link "Aller au contenu"]` |
-| Un parcours | `Écran -> Écran` | `Accueil -> Produits -> Détail produit` |
-
-L'export Jira reprend l'élément dans le titre et dans « Flow(s) / Screen(s) / Element(s) in concern ». La référence du ticket suit le format « RAWeb 1.1, Criterion X.Y: <intitulé officiel> », avec le lien `https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-X-Y`.
-
-**Mémoire des exports Jira** : l'outil retient, pour tout l'audit, les critères déjà exportés (la mémoire fait partie de la sauvegarde) et ne les exporte pas deux fois. « Tickets Jira : tout réexporter » reprend tous les critères non conformes.
-
-**Formats d'export** : Liste des critères en **Excel (.xlsx)** : une ligne par critère et par onglet, colonnes dimensionnées, ligne d'en-tête figée, filtres, statuts colorés, numéros de critères gardés en texte (« 10.10 » reste 10.10). Tickets Jira en **CSV** (séparateur virgule), à importer dans Jira et non à ouvrir dans Excel. Le téléchargement passe uniquement par le navigateur, sans dépendance à une autre application. 
-
-**Exports** : aucun fichier vide n'est produit. Sans onglet, sans critère testé ou sans critère non conforme, un message explique pourquoi l'export n'a pas lieu. Les sauvegardes RUXAWEB et RUXAAM sont distinctes : une sauvegarde RUXAAM ne s'ouvre pas dans RUXAWEB.
-
-## 7. Thèmes RUXAL
-Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autrement que les 13 thématiques officielles concernées, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu au clavier relève de « Navigation & Structure ». L'outil permet de basculer à tout moment vers la thématisation officielle.
+## 8. Thèmes RUXAL
+Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autrement que les 13 thématiques officielles concernées, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu au clavier relève de « Navigation & Structure ». La grille se range par défaut selon les thématiques officielles ; on peut basculer à tout moment vers les thèmes RUXAL.
 
 Navigation & Structure · Composants Interactifs · Images & Médias · Couleurs & Contrastes · Contenu & Lisibilité · Fondations Techniques · Formulaires.
 
-## 8. Gravité
+## 9. Gravité
 **La gravité n'est pas normative.** Ni le RAWeb ni WCAG 2.x n'en définissent : un critère est conforme ou non. Les niveaux A et AA indiquent l'exigibilité, pas la gêne réelle.
 
 La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la priorité** des tickets. C'est une valeur par défaut par critère, pensée pour un défaut qui touche un élément important de l'écran. Elle n'entre jamais dans le taux. Les gravités par défaut reprennent celles des critères équivalents de RUXAAM quand il y en a : c'est une **base de discussion**, non relue critère par critère avec les partenaires.
@@ -96,23 +90,23 @@ La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la p
 
 Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5 et 10.4 Sérieux ; 9.3 et 13.11 Modéré.
 
-## 9. Bonnes pratiques hors RAWeb
+## 10. Bonnes pratiques hors RAWeb
 Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
 - **Taille des cibles (bp1)** : au moins 24×24 px CSS, ou assez d'espace autour (WCAG 2.2, critère 2.5.8, niveau AA ; le RAWeb 1.1 repose sur WCAG 2.1, où seul le critère AAA 2.5.5 en parle).
 - **Fermeture d'une fenêtre modale (bp2)** : un bouton visible atteignable au clavier, et la touche Échap.
 - **Retour du focus (bp3)** : à la fermeture d'une fenêtre modale, le focus revient sur l'élément qui l'avait ouverte.
 
-## 10. Limites
+## 11. Limites
 - Pré-diagnostic : ne produit ni déclaration d'accessibilité ni taux de conformité officiel.
 - Même sélection de critères que l'audit simplifié du SIP, mais pas son résultat : l'échantillon, l'environnement de test et l'auditeur diffèrent.
 - La méthode du SIP ne couvre pas tout (voir section 4) : l'audit complet du RAWeb reste la référence.
-- Un critère déjà exporté vers Jira qui devient non conforme sur un autre écran n'est pas réexporté automatiquement : utilise « Tickets Jira : tout réexporter » ou complète le ticket existant.
 - Les consignes de test sont des aides de lecture : la méthodologie officielle du RAWeb 1.1 fait foi.
+- Pas encore repris : PDF du référentiel.
 
-## 11. Modifier l'outil
+## 12. Modifier l'outil
 Tout est dans `ruxaweb.html` : les critères et leurs textes se trouvent dans le bloc délimité par `DEBUT_DONNEES` et `FIN_DONNEES`, généré depuis le dépôt de développement (<https://github.com/lijko/ruxal-a11y>). Ne modifiez jamais le numéro, l'intitulé ni le niveau d'un critère officiel.
 
-## 12. Les 58 critères (52 de la sélection SIP, 6 hors sélection)
+## 13. Les 58 critères (52 de la sélection SIP, 6 hors sélection)
 Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU. Thèmes (regroupement), gravités et étapes : RUXAWEB.
 
 ### Navigation & Structure (14, plus 9.3 hors sélection)
@@ -207,18 +201,3 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 11.7 | A | Modéré | 3b | Formulaire | Dans chaque formulaire, chaque légende associée à un regroupement de champs de même nature est-elle pertinente ? |
 | 11.9 | A | Sérieux | 3b | Formulaire | Dans chaque formulaire, l’intitulé de chaque bouton est-il pertinent (hors cas particuliers) ? |
 | 11.10 | A | Sérieux | 3b | Formulaire | Dans chaque formulaire, le contrôle de saisie est-il utilisé de manière pertinente (hors cas particuliers) ? |
-
-## 13. RUXAWEB 2.0 : audit par observations
-`ruxaweb-2.html` reprend les mêmes critères, textes et règles de taux que la 1.7, mais inverse la saisie : l'auditeur note ce qu'il constate, et la grille se remplit.
-
-- **Observation** : ce que l'auditeur a vu, entendu ou atteint, un tag (#c conforme, #nc non conforme, #na non applicable) et les critères concernés, proposés à partir d'un point de contrôle. Sans critère, c'est une note libre, sans effet sur les statuts.
-- **Navigation** : en haut, le nom de l'audit et le menu Fichier, puis la ligne des onglets de l'audit avec leur état. Dans un onglet, deux vues seulement : Saisie (les observations) et Grille (les critères). Les étapes (clôture, lecture POUR/UX, résumé) s'ouvrent depuis le parcours, dans l'aide.
-- **Parcours** : préparer les écrans (nom et contenus), puis pour chaque écran le tour à vide et les 4 étapes de test, puis la clôture et le résumé. Le panneau d'aide, à droite, montre ce parcours et dit quoi faire et quoi chercher à l'étape en cours.
-- **Statuts** : un critère sans observation reste NT ; le pire statut l'emporte ; un contenu absent rend ses critères « si présent » non applicables.
-\1 Un même élément écrit avec une casse, des accents ou des espaces différents est reconnu comme le même.\n- **Scénario** : un champ « Transition vers » note une observation sur le passage d'un écran à l'autre, notée Écran -> Écran dans l'observation et dans le ticket Jira.
-- **Retest** : depuis la grille, un critère se remet à NT sur un écran ; les observations précédentes restent visibles, barrées.
-- **Clôture** : un critère à la fois, avec sa consigne « Comment vérifier », puis le statut de chaque écran encore sans statut (C, NC avec une observation, NA). « Conforme sur les N écrans » existe, mais critère par critère, pour éviter de tout valider en série.
-- **Exports** (menu Fichier) : grille Excel, un ticket Jira par observation non conforme (un seul pour une observation qui vaut sur plusieurs écrans), sauvegarde. Les sauvegardes de la 1.x ne s'ouvrent pas dans la 2.0.
-- **Import axe ou Lighthouse** : bouton « Importer axe ou Lighthouse » sur l'écran en cours. Rapport JSON d'axe-core, ou rapport Lighthouse enregistré en JSON depuis les outils de développement d'Edge ou de Chrome. Les échecs et les points à vérifier deviennent des pistes, jamais des statuts : « Reprendre » les place dans le formulaire d'observation, « Écarter » les retire. \1 La correspondance des règles avec les critères a été relue contre la documentation officielle d'axe-core. Lighthouse teste l'écran dans l'état où il est : pour une fenêtre ouverte ou un formulaire en erreur, relance le rapport dans cet état.
-- **Lecture POUR/UX** (scénarios seulement) : une étape « Lecture POUR/UX » dans le parcours, après le test écran par écran. 8 questions sur le parcours entier : Succès, Difficile, Échec ou N/A, avec un commentaire si difficile ou échec. Le score (succès sur réponses hors N/A) est affiché à part et n'entre jamais dans le taux ; il est repris dans le résumé et dans l'export Excel.
-- **Pas encore repris** : PDF du référentiel.
