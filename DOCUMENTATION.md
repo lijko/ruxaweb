@@ -9,7 +9,7 @@ L'audit se fait **par observations** : l'auditeur note ce qu'il constate, et la 
 - **Audit rapide** : les 52 critères sur un échantillon de 3 écrans au moins (accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
 - **Scénario** : un parcours, écran par écran, avec en plus la lecture POUR/UX (section 6).
 
-Chaque onglet garde son propre taux, jamais fusionné avec un autre.
+Chaque onglet garde son propre taux, jamais fusionné avec un autre. Un onglet se supprime en deux clics, depuis le tableau de bord ou la page des écrans de l'onglet (« Gérer les écrans »).
 
 ## 3. Observations, statuts et taux
 - **Observation** : ce que l'auditeur a vu, entendu ou atteint, un tag (#c conforme, #nc non conforme, #na non applicable) et les critères concernés, proposés à partir d'un point de contrôle. Sans critère, c'est une note libre, sans effet sur les statuts.
