@@ -85,9 +85,9 @@ Répartition (étape principale, bonnes pratiques comprises) : 1. Usage standard
 - Les sauvegardes RUXAWEB et RUXAAM sont distinctes : une sauvegarde RUXAAM ne s'ouvre pas dans RUXAWEB.
 
 ## 8. Thèmes RUXAL
-Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autrement que les 13 thématiques officielles concernées, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu au clavier relève de « Navigation & Structure ». La grille se range par défaut selon les thématiques officielles ; on peut basculer à tout moment vers les thèmes RUXAL.
+Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autrement que les 13 thématiques officielles concernées, pour s'aligner sur la façon de travailler d'une équipe produit. Règle : tout ce qui empêche d'atteindre un élément ou un contenu, au clavier ou avec une technologie d'assistance, relève de « Navigation & structure ». La grille se range par défaut selon les thématiques officielles ; on peut basculer à tout moment vers les thèmes RUXAL.
 
-Navigation & Structure · Composants Interactifs · Images & Médias · Couleurs & Contrastes · Contenu & Lisibilité · Fondations Techniques · Formulaires.
+Navigation & structure · Composants interactifs · Images & médias · Couleurs & contrastes · Contenu & lisibilité · Fondations techniques · Formulaires.
 
 ## 9. Gravité
 **La gravité n'est pas normative.** Ni le RAWeb ni WCAG 2.x n'en définissent : un critère est conforme ou non. Les niveaux A et AA indiquent l'exigibilité, pas la gêne réelle.
@@ -121,7 +121,7 @@ Tout est dans `ruxaweb.html` : les critères et leurs textes se trouvent dans le
 ## 13. Les 58 critères (52 de la sélection SIP, 6 hors sélection)
 Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU. Thèmes (regroupement), gravités et étapes : RUXAWEB.
 
-### Navigation & Structure (14, plus 9.3 hors sélection)
+### Navigation & structure (14, plus 9.3 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -141,7 +141,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 12.9 | A | Critique | 4 |  | Dans chaque page web, la navigation ne doit pas contenir de piège au clavier. Cette règle est-elle respectée ? |
 | 9.3 (hors sélection, taux élargi) | A | Modéré | 3a |  | Dans chaque page web, chaque liste est-elle correctement structurée ? |
 
-### Composants Interactifs (2, plus 7.1, 7.5 et 13.11 hors sélection)
+### Composants interactifs (2, plus 7.1, 7.5 et 13.11 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -151,7 +151,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 7.1 (hors sélection, taux élargi) | A | Critique | 3a |  | Chaque script est-il, si nécessaire, compatible avec les technologies d’assistance ? |
 | 7.5 (hors sélection, taux élargi) | AA | Sérieux | 3a |  | Dans chaque page web, les messages de statut sont-ils correctement restitués par les technologies d’assistance ? |
 
-### Images & Médias (15)
+### Images & médias (15)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -171,7 +171,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 4.10 | A | Sérieux | 1 | Média temporel ou son | Chaque son déclenché automatiquement est-il contrôlable par l’utilisateur ? |
 | 4.11 | A | Sérieux | 4 | Média temporel ou son | La consultation de chaque média temporel est-elle, si nécessaire, contrôlable par le clavier et tout dispositif de pointage ? |
 
-### Couleurs & Contrastes (4, plus 3.3 hors sélection)
+### Couleurs & contrastes (4, plus 3.3 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -181,7 +181,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 10.10 | A | Modéré | 3a |  | Dans chaque page web, l’information ne doit pas être donnée par la forme, taille ou position uniquement. Cette règle est-elle implémentée de façon pertinente ? |
 | 3.3 (hors sélection, taux élargi) | AA | Sérieux | 1 |  | Dans chaque page web, les couleurs utilisées dans les composants d’interface ou les éléments graphiques porteurs d’informations sont-elles suffisamment contrastées (hors cas particuliers) ? |
 
-### Contenu & Lisibilité (4, plus 10.4 hors sélection)
+### Contenu & lisibilité (4, plus 10.4 hors sélection)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
@@ -191,7 +191,7 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 13.8 | A | Sérieux | 1 |  | Dans chaque page web, chaque contenu en mouvement ou clignotant est-il contrôlable par l’utilisateur (hors cas particuliers) ? |
 | 10.4 (hors sélection, taux élargi) | AA | Sérieux | 1 |  | Dans chaque page web, le texte reste-t-il lisible lorsque la taille des caractères est augmentée jusqu’à 200 %, au moins (hors cas particuliers) ? |
 
-### Fondations Techniques (6)
+### Fondations techniques (6)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
