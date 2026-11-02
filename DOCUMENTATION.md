@@ -99,6 +99,8 @@ Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autremen
 | Fondations techniques | Langue, éléments décoratifs ignorés par les technologies d'assistance, respect des réglages d'accessibilité du système. | 6.1, 6.2, 12.3 | 8.2, 8.3, 8.4, 8.7, 8.8, 10.8 |
 | Formulaires | Étiquettes, champs, erreurs et aide à la saisie. | 9.1, 9.2, 9.3, 9.5 à 9.11 | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
 
+**Niveau du taux** (page Projet, résumé, en-tête de la grille) : il suit le taux sélection SIP, toujours écrit à côté du chiffre et coloré comme les statuts : **Conforme** (100 %), **Bon** (75 à 99 %), **À améliorer** (50 à 74 %), **Insuffisant** (moins de 50 %). C'est un repère de pré-diagnostic, pas un niveau de conformité au sens d'une déclaration d'accessibilité.
+
 ## 9. Gravité
 **La gravité n'est pas normative.** Ni le RAWeb ni WCAG 2.x n'en définissent : un critère est conforme ou non. Les niveaux A et AA indiquent l'exigibilité, pas la gêne réelle.
 
@@ -106,10 +108,10 @@ La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la p
 
 | Niveau | Repère | Priorité Jira |
 |---|---|---|
-| **Critique** | Empêche, pour au moins un groupe d'utilisateurs, d'accéder à une fonction ou à un contenu essentiel, sans contournement ; ou met la personne en danger (effets de flash). | Highest |
-| **Sérieux** | Barrière forte : rend la tâche très difficile, et peut la bloquer selon le contexte. | High |
+| **Critique** | Empêche, pour au moins un groupe d'utilisateurs, d'accéder à une fonction ou à un contenu essentiel, sans contournement ; ou met la personne en danger (effets de flash). | Blocker |
+| **Sérieux** | Barrière forte : rend la tâche très difficile, et peut la bloquer selon le contexte. | Highest |
 | **Modéré** | Difficulté réelle, mais un contournement existe et l'essentiel reste accessible. | Medium |
-| **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Low |
+| **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Minor |
 
 Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5 et 10.4 Sérieux ; 9.3 et 13.11 Modéré.
 
