@@ -40,6 +40,10 @@ Coller toute la réponse fonctionne aussi : RUXAWEB lit les lignes et ignore les
 
 Les critères proposés par une IA restent à vérifier par l'auditeur.
 
+## Après une modification d'une consigne
+
+Repasser les cas de [`grille-non-regression.md`](grille-non-regression.md) dans Copilot avant de publier la nouvelle version.
+
 ---
 
 **EN**: three Microsoft 365 Copilot agents. Create each one in Agent Builder: copy the Name and Description above and paste the instruction file into Instructions (under the 8,000 character limit). The RAWeb and JIRA Task agents also need the RAWeb 1.1 criteria list as Knowledge (link above); the RUXAWEB agent needs none, its 58 criteria and 3 good practices are in its instructions.
