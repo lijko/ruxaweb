@@ -23,6 +23,7 @@ Ouvrir `ruxaweb.html` dans un navigateur. Aucune installation, aucun serveur, au
 | `DOCUMENTATION.md` | observations et taux, sélection des critères, règle « si présent », parcours d'audit, gravités, limites, liste des 58 critères |
 | `donnees-fictives-ruxaweb-v2.0.json` | projet fictif à ouvrir (Fichier, « Ouvrir une sauvegarde ») pour essayer l'outil : boutique en ligne, fonctions primaires, audit simple et scénario d'achat |
 | `raweb-1.1-criteres.txt` | liste des 136 critères du RAWeb 1.1 (numéro et intitulé officiel), une ligne par critère ; sert de référence à l'agent Copilot « Observation -> RAWeb » |
+| `raweb-1.1-criteria-en.txt` | la même liste en anglais (intitulés officiels anglais) ; sert de référence à l'agent Copilot « JIRA Task » |
 | `LICENSE` | EUPL-1.2 |
 | `README.md` | ce fichier |
 
