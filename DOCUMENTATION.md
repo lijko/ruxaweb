@@ -1,14 +1,14 @@
 # Documentation RUXAWEB
 
 ## 1. Principe
-RUXAWEB sert à **trier avant d'auditer**. Il ne remplace pas l'audit complet du RAWeb 1.1 (136 critères) : il en retient les 52 de la méthode de contrôle simplifié du SIP, qui suffisent à repérer vite les barrières les plus fréquentes sur un site web, puis il aide à rédiger et prioriser les tickets.
+RUXAWEB sert à **trier avant d'auditer**. Il ne remplace pas l'audit complet du RAWeb 1.1 (136 critères) : il en retient les 53 de la méthode de contrôle simplifié du SIP, qui suffisent à repérer vite les barrières les plus fréquentes sur un site web, puis il aide à rédiger et prioriser les tickets.
 
 L'audit se fait **par observations** : l'auditeur note ce qu'il constate, et la grille des critères se remplit.
 
 ## 2. Types d'audit
 Le fichier de travail est un **projet** (« Projet A11Y - nom »). Il contient des onglets, chacun relevant d'un module :
 
-- **Audit simple** : les 52 critères de la sélection SIP, plus les 6 hors sélection et les bonnes pratiques, sur 3 à 5 écrans (par défaut : accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Deux taux : sélection SIP et élargi. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
+- **Audit simple** : les 53 critères de la sélection SIP, plus les 6 hors sélection et les bonnes pratiques, sur 3 à 5 écrans (par défaut : accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Deux taux : sélection SIP et élargi. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
 - **Audit complet** : les 136 critères du RAWeb 1.1, en vue d'une déclaration d'accessibilité. Affiché « à venir », pas encore disponible.
 - **Scénario** : un enchaînement d'écrans (achat, souscription), avec la lecture UX/POUR (section 6). Un seul taux : sélection SIP.
 - **Page Projet** (premier onglet de la barre) : nom et support du projet, onglets avec leur état et leur suppression, création d'un onglet par module, et **fonctions primaires** (une fonction ajoutée à la main se supprime sur sa ligne, avec ses observations). Chaque carte d'onglet a son menu d'actions (bouton ⋮ en haut à droite) : Gérer les écrans, Supprimer, qui devient Confirmer au premier clic (Échap ou un clic ailleurs annule) ; dans « Gérer les écrans », la suppression de l'onglet est dans sa carte, avec son nom et son type.
@@ -32,17 +32,17 @@ Chaque onglet garde son propre taux, jamais fusionné avec un autre. Un onglet s
 - **Modifier une observation** : « Modifier » la recharge dans le formulaire (texte, résultat, élément, écrans, critères). Utile pour ajouter un critère à une note.
 - **Nouvelle observation** (en haut du formulaire) : vide le formulaire sans enregistrer. **Dupliquer** (en modification) : ouvre une copie à compléter, avec le même élément et les mêmes écrans, sans texte ni critère, pour un autre défaut du même élément. S'il reste des modifications non enregistrées, l'outil demande d'abord : Enregistrer, Ne pas enregistrer ou Annuler.
 - **Retest** : depuis la grille, un critère se remet à NT sur un écran ; les observations précédentes restent visibles, barrées.
-- **Taux** : calculé sans les NA. Deux taux, même formule : le **taux sélection SIP** (les 52 critères de la méthode du SIP), taux principal, et le **taux élargi**, qui ajoute les 6 critères hors sélection (section 4). La lecture POUR/UX et les bonnes pratiques hors RAWeb n'entrent pas dans le taux.
+- **Taux** : calculé sans les NA. Deux taux, même formule : le **taux sélection SIP** (les 53 critères de la méthode du SIP), taux principal, et le **taux élargi**, qui ajoute les 6 critères hors sélection (section 4). La lecture POUR/UX et les bonnes pratiques hors RAWeb n'entrent pas dans le taux.
 
 ## 4. Sélection des critères
-- Les 52 critères du RAWeb 1.1 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) : 47 testés manuellement et 19 avec l'extension Axe (14 critères des deux façons), soit 52 critères distincts. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
+- Les 52 critères du RAWeb 1.1 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) : 47 testés manuellement et 19 avec l'extension Axe (14 critères des deux façons), soit 52 critères distincts, plus le 8.1 (type de document), présent dans la grille d'exemple du SIP. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
 - Contrairement à RUXAAM, aucune adaptation : la méthode du SIP est faite pour le web. Le taux de l'audit rapide porte donc sur la même sélection que l'audit simplifié du SIP, sans en être un résultat officiel (échantillon, environnement et auditeur différents).
 - La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1).
 - **Six critères officiels hors sélection : 3.3, 7.1, 7.5, 9.3, 10.4 et 13.11.** Ils comptent dans le taux élargi et sont exportés vers Jira comme les autres. Ils n'entrent ni dans le taux sélection SIP, ni dans sa complétion.
-- Plus 3 bonnes pratiques hors RAWeb (section 10), soit 61 éléments dans l'outil.
+- Plus 3 bonnes pratiques hors RAWeb (section 10), soit 62 éléments dans l'outil.
 
 ## 5. Règle « si présent »
-24 critères sur 52 ne s'appliquent que si l'écran contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous.
+24 critères sur 53 ne s'appliquent que si l'écran contient le contenu concerné. Chacun est rattaché à l'un des huit déclencheurs ci-dessous.
 
 Dans « Préparer les écrans », un interrupteur par écran et par contenu indique ce que contient l'écran. Tout est désactivé au départ. Sur un écran qui ne contient pas le contenu, les critères concernés comptent comme NA. Rien n'est effacé : réactiver un interrupteur retrouve les observations. Il n'y a pas d'interrupteur global : la limite de temps (13.1) est un critère cœur.
 
@@ -101,7 +101,7 @@ Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autremen
 | Images & médias | Alternatives textuelles des images ; sous-titres, transcriptions et contrôle des médias et du son. | 1.1 à 1.6, 3.5, 3.7, 3.9, 3.12, 3.13 | 1.1 à 1.7, 4.1 à 4.4, 4.8 à 4.11 |
 | Couleurs & contrastes | Contrastes ; information qui ne doit pas reposer uniquement sur la couleur, la forme, la taille ou la position. | 2.1, 2.2, 2.3, 8.6 | 3.1, 3.2, 3.3, 10.9, 10.10 |
 | Contenu & lisibilité | Texte lisible et agrandissable, tableaux, orientation, animations et flashs, documents. | 4.5, 8.1, 8.2, 11.7, 11.8, 11.9 | 5.6, 5.7, 10.4, 13.7, 13.8 |
-| Fondations techniques | Langue, éléments décoratifs ignorés par les technologies d'assistance, respect des réglages d'accessibilité du système. | 6.1, 6.2, 12.3 | 8.2, 8.3, 8.4, 8.7, 8.8, 10.8 |
+| Fondations techniques | Langue, éléments décoratifs ignorés par les technologies d'assistance, respect des réglages d'accessibilité du système. | 6.1, 6.2, 12.3 | 8.1, 8.2, 8.3, 8.4, 8.7, 8.8, 10.8 |
 | Formulaires | Étiquettes, champs, erreurs et aide à la saisie. | 9.1, 9.2, 9.3, 9.5 à 9.11 | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
 
 **Niveau du taux** (page Projet, résumé, en-tête de la grille) : il suit le taux sélection SIP, toujours écrit à côté du chiffre et coloré comme les statuts : **Conforme** (100 %), **Bon** (75 à 99 %), **À améliorer** (50 à 74 %), **Insuffisant** (moins de 50 %). C'est un repère de pré-diagnostic, pas un niveau de conformité au sens d'une déclaration d'accessibilité.
@@ -118,7 +118,7 @@ La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la p
 | **Modéré** | Difficulté réelle, mais un contournement existe et l'essentiel reste accessible. | Medium |
 | **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Minor |
 
-Répartition par défaut des 52 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 1 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5 et 10.4 Sérieux ; 9.3 et 13.11 Modéré.
+Répartition par défaut des 53 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 2 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5 et 10.4 Sérieux ; 9.3 et 13.11 Modéré.
 
 ## 10. Bonnes pratiques hors RAWeb
 Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
@@ -135,7 +135,7 @@ Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
 ## 12. Modifier l'outil
 Tout est dans `ruxaweb.html` : les critères et leurs textes se trouvent dans le bloc délimité par `DEBUT_DONNEES` et `FIN_DONNEES`, généré depuis le dépôt de développement (<https://github.com/lijko/ruxal-a11y>). Ne modifiez jamais le numéro, l'intitulé ni le niveau d'un critère officiel.
 
-## 13. Les 58 critères (52 de la sélection SIP, 6 hors sélection)
+## 13. Les 59 critères (53 de la sélection SIP, 6 hors sélection)
 Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU. Thèmes (regroupement), gravités et étapes : RUXAWEB.
 
 ### Navigation & structure (14, plus 9.3 hors sélection)
@@ -208,10 +208,11 @@ Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU
 | 13.8 | A | Sérieux | 1 |  | Dans chaque page web, chaque contenu en mouvement ou clignotant est-il contrôlable par l’utilisateur (hors cas particuliers) ? |
 | 10.4 (hors sélection, taux élargi) | AA | Sérieux | 1 |  | Dans chaque page web, le texte reste-t-il lisible lorsque la taille des caractères est augmentée jusqu’à 200 %, au moins (hors cas particuliers) ? |
 
-### Fondations techniques (6)
+### Fondations techniques (7)
 
 | RAWeb | Niveau | Gravité | Étape | Si présent | Intitulé |
 |---|---|---|---|---|---|
+| 8.1 | A | Mineur | 2 |  | Chaque page web est-elle définie par un type de document ? |
 | 8.2 | A | Sérieux | 2 |  | Pour chaque page web, le code source généré est-il valide selon le type de document spécifié ? |
 | 8.3 | A | Sérieux | 2 |  | Dans chaque page web, la langue par défaut est-elle présente ? |
 | 8.4 | A | Sérieux | 2 |  | Pour chaque page web ayant une langue par défaut, le code de langue est-il pertinent ? |

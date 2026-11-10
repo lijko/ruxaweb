@@ -4,7 +4,7 @@ Trois agents pour **Microsoft 365 Copilot** (Agent Builder), un par usage, à cr
 
 | Agent | Ce qu'il fait | Critères couverts | Connaissance | Instructions |
 |---|---|---|---|---|
-| **[A11Y] Observation -> RUXAWEB** | Transforme des notes libres en lignes à coller dans RUXAWEB (« Coller des observations »), puis explique brièvement chaque critère | Les 58 critères et 3 bonnes pratiques de RUXAWEB, inclus dans les instructions | Aucune | [`observation-ruxaweb-instructions.txt`](observation-ruxaweb-instructions.txt) |
+| **[A11Y] Observation -> RUXAWEB** | Transforme des notes libres en lignes à coller dans RUXAWEB (« Coller des observations »), puis explique brièvement chaque critère | Les 59 critères et 3 bonnes pratiques de RUXAWEB, inclus dans les instructions | Aucune | [`observation-ruxaweb-instructions.txt`](observation-ruxaweb-instructions.txt) |
 | **[A11Y] Observation -> RAWeb** | Donne les critères RAWeb concernés par une observation, avec leur intitulé officiel et la raison | Les 136 critères du RAWeb 1.1 | Liste des critères | [`observation-raweb-instructions.txt`](observation-raweb-instructions.txt) |
 | **[A11Y] JIRA Task** | Écrit un ticket Jira au format de l'équipe à partir d'une observation, de notes ou d'un ticket existant | Les 136 critères du RAWeb 1.1 | Liste des critères | [`jira-task-instructions.txt`](jira-task-instructions.txt) |
 
@@ -46,6 +46,6 @@ Repasser les cas de [`grille-non-regression.md`](grille-non-regression.md) dans 
 
 ---
 
-**EN**: three Microsoft 365 Copilot agents. Create each one in Agent Builder: copy the Name and Description above and paste the instruction file into Instructions (under the 8,000 character limit). The RAWeb and JIRA Task agents also need the RAWeb 1.1 criteria list as Knowledge (link above); the RUXAWEB agent needs none, its 58 criteria and 3 good practices are in its instructions.
+**EN**: three Microsoft 365 Copilot agents. Create each one in Agent Builder: copy the Name and Description above and paste the instruction file into Instructions (under the 8,000 character limit). The RAWeb and JIRA Task agents also need the RAWeb 1.1 criteria list as Knowledge (link above); the RUXAWEB agent needs none, its 59 criteria and 3 good practices are in its instructions.
 
 Licence : instructions © 2026 Bertrand Kempf, CC BY 4.0. Liste des critères du RAWeb 1.1 : © SIP Luxembourg, CC BY 3.0 LU.
