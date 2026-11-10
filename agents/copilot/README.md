@@ -33,7 +33,7 @@ Coller ses notes dans l'agent, par exemple :
 
 L'agent rend deux blocs :
 
-1. un **bloc de code** avec les lignes `statut | élément | observation | critères` : bouton « Copier » du bloc, puis RUXAWEB, Saisie, « Coller des observations » ;
+1. un **bloc de code** avec les lignes `élément | observation | critères` (défauts seulement) : bouton « Copier » du bloc, puis RUXAWEB, Saisie, « Coller des observations » ;
 2. **Criteria:** chaque critère avec son sujet et la raison, pour vérifier avant de coller.
 
 Coller toute la réponse fonctionne aussi : RUXAWEB lit les lignes et ignore les explications. Option : `lines only` pour le bloc de lignes seul. Un défaut hors des critères de RUXAWEB n'est pas forcé dans une ligne : l'agent le signale et renvoie vers l'agent Observation -> RAWeb.
