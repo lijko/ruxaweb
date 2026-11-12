@@ -58,7 +58,7 @@ Dans « Préparer les écrans », ou à tout moment avec le bouton « Ce que con
 | Autre langue | l'écran contient un passage dans une autre langue que celle de la page | 8.7, 8.8 |
 
 ## 6. Parcours d'audit
-Le panneau des étapes, fixe et toujours au même endroit, sans titre visible (un titre masqué le nomme pour les lecteurs d'écran), montre la liste des étapes (Avant, Étapes sur tous les écrans, Pour finir) avec l'étape en cours mise en avant ; un clic sur une étape y mène. Il dit quoi faire et quoi chercher à l'étape en cours.
+Le panneau des étapes, fixe et toujours au même endroit, sans titre visible (un titre masqué le nomme pour les lecteurs d'écran), montre la liste des étapes (Avant, Étapes, Pour finir) avec l'étape en cours mise en avant ; un clic sur une étape y mène. Il dit quoi faire et quoi chercher à l'étape en cours. Le titre des étapes dit sur quoi elles se font (« Étapes, sur 3 écrans et 2 fonctions ») ; sous chaque étape, « 2/5 faits » compte les écrans et fonctions où elle est validée. Ouvrir la grille par la bascule Observation | Grille garde l'étape en cours mise en avant : « Compléter la grille » ne s'allume que si on y va par cette étape, ou une fois toutes les étapes faites.
 
 **Masquer le panneau** : pendant l'audit (Observation, Grille, Préparer, Résumé), un bouton en icône, à droite du bandeau de l'onglet, affiche ou masque le panneau des étapes. Sans bordure ni fond, il montre un panneau avec un chevron vers la gauche pour afficher, vers la droite pour masquer, en couleur d'accent quand le panneau est ouvert. Il reste au même endroit, panneau ouvert ou fermé. Une bulle « Afficher les étapes » ou « Masquer les étapes » s'affiche au survol et au focus clavier ; Échap la ferme. Panneau masqué, le contenu prend toute la largeur et le libellé lu par le lecteur d'écran rappelle l'étape en cours, par exemple « Afficher les étapes (étape 2/6 Usage standard) ». Le panneau est ouvert à chaque nouvel audit, nouvel onglet ou sauvegarde ouverte ; ce choix d'affichage n'est pas enregistré dans la sauvegarde. Projet et Référentiel affichent toujours le panneau, sans bouton.
 
@@ -67,7 +67,7 @@ Le panneau des étapes, fixe et toujours au même endroit, sans titre visible (u
 1. **Préparer les écrans** : noms et contenus.
 2. **Étape par étape, sur tous les écrans** : un **tour à vide** (sans outil, pour comprendre les écrans), puis les 4 étapes de test ci-dessous. Chaque étape se fait sur tous les écrans avant de passer à la suivante : on règle l'outil une seule fois (zoom, lecteur d'écran) et on repère tôt les éléments répétés. « Valider puis passer à : » mène à l'écran suivant, puis à l'étape suivante, puis à la grille ; la colonne des écrans coche ceux déjà faits pour l'étape en cours. La navigation reste libre : on peut changer d'écran ou d'étape à tout moment, par exemple pour un écran accessible peu de temps.
 3. **Lecture POUR/UX** (scénarios seulement) : 8 questions sur le parcours entier, Succès, Difficile, Échec ou N/A, avec un commentaire si difficile ou échec. Le score (succès sur réponses hors N/A) est affiché à part et n'entre jamais dans le taux.
-4. **Compléter la grille** : le filtre « À définir » liste les critères encore NT ; un clic sur une case pose son statut. « Valider l'onglet » se trouve dans la grille.
+4. **Compléter la grille** : le filtre NT liste les critères encore NT ; un clic sur une case pose son statut. « Valider l'onglet » se trouve dans la grille.
 5. **Résumé et exports**.
 
 Les 4 étapes de test, toujours dans cet ordre :
