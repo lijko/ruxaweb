@@ -3,7 +3,7 @@
 **FR** : Outil HTML autonome (un seul fichier, hors ligne) qui aide à **préparer et prioriser un audit d'accessibilité de site web**, avant l'audit complet. L'audit se fait **par observations** : l'auditeur note ce qu'il constate, et la grille des critères se remplit. Il croise :
 
 - **les 53 critères du RAWeb 1.1** (référentiel du SIP, Luxembourg) retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html), dont 24 « si présent », qui donnent un **taux de conformité** ;
-- **6 critères RAWeb hors sélection du SIP** (3.3, 7.1, 7.5, 9.3, 10.4, 13.11), qui comptent dans un **taux élargi**, affiché à côté du taux sélection SIP ;
+- **7 critères RAWeb hors sélection du SIP** (3.3, 7.1, 7.5, 9.3, 10.4, 10.6, 13.11), qui comptent dans un **taux élargi**, affiché à côté du taux sélection SIP ;
 - **3 bonnes pratiques** hors RAWeb (taille des cibles, fermeture d'une fenêtre modale, retour du focus), hors taux ;
 - pour les scénarios, **une lecture POUR/UX** qualitative, **exclue du taux**.
 

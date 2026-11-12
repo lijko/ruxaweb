@@ -8,7 +8,7 @@ L'audit se fait **par observations** : l'auditeur note ce qu'il constate, et la 
 ## 2. Types d'audit
 Le fichier de travail est un **projet** (« Projet A11Y - nom »). Il contient des onglets, chacun relevant d'un module :
 
-- **Audit simple** : les 53 critères de la sélection SIP, plus les 6 hors sélection et les bonnes pratiques, sur 3 à 5 écrans (par défaut : accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Deux taux : sélection SIP et élargi. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
+- **Audit simple** : les 53 critères de la sélection SIP, plus les 7 hors sélection et les bonnes pratiques, sur 3 à 5 écrans (par défaut : accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Deux taux : sélection SIP et élargi. Dans RUXAWEB, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
 - **Audit complet** : les 136 critères du RAWeb 1.1, en vue d'une déclaration d'accessibilité. Affiché « à venir », pas encore disponible.
 - **Scénario** : un enchaînement d'écrans (achat, souscription), avec la lecture UX/POUR (section 6). Un seul taux : sélection SIP.
 - **Page Projet** (premier onglet de la barre) : nom et support du projet, onglets avec leur état et leur suppression, création d'un onglet par module, et **fonctions primaires** (une fonction ajoutée à la main se supprime sur sa ligne, avec ses observations). Chaque carte d'onglet a son menu d'actions (bouton ⋮ en haut à droite) : Gérer les écrans, Supprimer, qui devient Confirmer au premier clic (Échap ou un clic ailleurs annule) ; dans « Gérer les écrans », la suppression de l'onglet est dans sa carte, avec son nom et son type.
@@ -39,7 +39,7 @@ Chaque onglet garde son propre taux, jamais fusionné avec un autre. Un onglet s
 - Les 53 critères du RAWeb 1.1 de la sélection SIP : les 52 retenus par la [méthode de contrôle simplifié v1.2.1 du SIP](https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html) (47 testés manuellement et 19 avec l'extension Axe, 14 critères des deux façons), plus le 8.1 (type de document), présent dans la grille d'exemple du SIP. Intitulés, niveaux (A, AA) et références WCAG / EN 301 549 **identiques** au référentiel officiel.
 - Contrairement à RUXAAM, aucune adaptation : la méthode du SIP est faite pour le web. Le taux de l'audit rapide porte donc sur la même sélection que l'audit simplifié du SIP, sans en être un résultat officiel (échantillon, environnement et auditeur différents).
 - La méthode du SIP ne retient pas certains critères pourtant fréquents en audit complet, par exemple l'agrandissement du texte (10.4), les messages de statut (7.5) ou la compatibilité des scripts avec les technologies d'assistance (7.1).
-- **Six critères officiels hors sélection : 3.3, 7.1, 7.5, 9.3, 10.4 et 13.11.** Ils comptent dans le taux élargi et sont exportés vers Jira comme les autres. Ils n'entrent ni dans le taux sélection SIP, ni dans sa complétion.
+- **Sept critères officiels hors sélection : 3.3, 7.1, 7.5, 9.3, 10.4, 10.6 et 13.11.** Ils comptent dans le taux élargi et sont exportés vers Jira comme les autres. Ils n'entrent ni dans le taux sélection SIP, ni dans sa complétion.
 - Plus 3 bonnes pratiques hors RAWeb (section 10), soit 62 éléments dans l'outil.
 
 ## 5. Règle « si présent »
@@ -102,7 +102,7 @@ Taxonomie commune à la famille RUXAL, qui regroupe les critères RAWeb autremen
 | Navigation & structure | Tout ce qui permet ou empêche d'atteindre un élément ou un contenu, au clavier ou avec une technologie d'assistance ; structure de l'écran. | 5.2, 5.3, 7.1, 8.5, 10.1, 10.2, 10.3 | 2.1, 6.1, 6.2, 7.3, 8.5, 8.6, 9.1, 9.2, 9.3, 10.7, 10.14, 12.6, 12.7, 12.8, 12.9 |
 | Composants interactifs | Nom, rôle et état des boutons et contrôles ; messages de statut ; gestes, limites de temps et authentification. | 5.1, 5.4, 5.5, 8.7, 11.1, 11.2, 11.10, 11.11, 11.12, 11.13, 11.15 | 7.1, 7.5, 12.11, 13.1, 13.11 |
 | Images & médias | Alternatives textuelles des images ; sous-titres, transcriptions et contrôle des médias et du son. | 1.1 à 1.6, 3.5, 3.7, 3.9, 3.12, 3.13 | 1.1 à 1.7, 4.1 à 4.4, 4.8 à 4.11 |
-| Couleurs & contrastes | Contrastes ; information qui ne doit pas reposer uniquement sur la couleur, la forme, la taille ou la position. | 2.1, 2.2, 2.3, 8.6 | 3.1, 3.2, 3.3, 10.9, 10.10 |
+| Couleurs & contrastes | Contrastes ; information qui ne doit pas reposer uniquement sur la couleur, la forme, la taille ou la position. | 2.1, 2.2, 2.3, 8.6 | 3.1, 3.2, 3.3, 10.6, 10.9, 10.10 |
 | Contenu & lisibilité | Texte lisible et agrandissable, tableaux, orientation, animations et flashs, documents. | 4.5, 8.1, 8.2, 11.7, 11.8, 11.9 | 5.6, 5.7, 10.4, 13.7, 13.8 |
 | Fondations techniques | Langue, éléments décoratifs ignorés par les technologies d'assistance, respect des réglages d'accessibilité du système. | 6.1, 6.2, 12.3 | 8.1, 8.2, 8.3, 8.4, 8.7, 8.8, 10.8 |
 | Formulaires | Étiquettes, champs, erreurs et aide à la saisie. | 9.1, 9.2, 9.3, 9.5 à 9.11 | 11.1, 11.2, 11.5, 11.6, 11.7, 11.9, 11.10 |
@@ -121,7 +121,7 @@ La gravité de RUXAWEB sert à **trier** les non-conformités et à **fixer la p
 | **Modéré** | Difficulté réelle, mais un contournement existe et l'essentiel reste accessible. | Medium |
 | **Mineur** | Gêne ou ralentissement, sans empêcher la tâche. | Minor |
 
-Répartition par défaut des 53 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 2 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5 et 10.4 Sérieux ; 9.3 et 13.11 Modéré.
+Répartition par défaut des 53 critères RAWeb : 25 Sérieux, 18 Modéré, 8 Critique, 2 Mineur. Critères hors sélection : 7.1 Critique ; 3.3, 7.5, 10.4 et 10.6 Sérieux ; 9.3 et 13.11 Modéré.
 
 ## 10. Bonnes pratiques hors RAWeb
 Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
