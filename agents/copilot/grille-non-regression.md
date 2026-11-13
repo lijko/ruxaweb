@@ -2,9 +2,9 @@
 
 À repasser après **chaque modification** d'une consigne, avant de la publier. Une conversation neuve par cas, la note collée telle quelle. Un écart sur la colonne « Attendu » est une régression : corriger la consigne avant de la publier.
 
-Les critères attendus sont ceux de RUXAWEB (agent Observation -> RUXAWEB). L'agent Observation -> RAWeb doit donner les mêmes critères en tête, avec leur intitulé officiel ; il peut en ajouter sous « Also check ».
+Les critères attendus sont ceux de RUXAWeb (agent Observation -> RUXAWeb). L'agent Observation -> RAWeb doit donner les mêmes critères en tête, avec leur intitulé officiel ; il peut en ajouter sous « Also check ».
 
-## Agent [A11Y] Observation -> RUXAWEB
+## Agent [A11Y] Observation -> RUXAWeb
 
 | # | Note à coller | Attendu |
 |---|---|---|
@@ -18,7 +18,7 @@ Les critères attendus sont ceux de RUXAWEB (agent Observation -> RUXAWEB). L'ag
 | 8 | Modale de connexion : Échap ne la ferme pas et à la fermeture le focus part en haut de la page. | **Deux lignes** (deux défauts) : **BP2** et **BP3** (12.8 accepté en plus pour la seconde) |
 | 9 | Après envoi du formulaire, le message d'erreur "Mot de passe incorrect" s'affiche mais n'est pas lu par le lecteur d'écran. | Une ligne, critère **11.10** en tête (7.5 accepté en plus) |
 | 10 | Le carrousel de la page d'accueil défile tout seul, sans bouton pause. | Une ligne, critère **13.8** |
-| 11 | Le champ Email n'a pas d'autocomplete. | **Aucune ligne** : hors RUXAWEB, renvoi vers l'agent Observation -> RAWeb (qui doit répondre **11.13**) |
+| 11 | Le champ Email n'a pas d'autocomplete. | **Aucune ligne** : hors RUXAWeb, renvoi vers l'agent Observation -> RAWeb (qui doit répondre **11.13**) |
 | 12 | Le formulaire n'est pas accessible. | **Aucune ligne** : une question sous « To clarify: » |
 | 13 | Cas 1 suivi de « en français » | Observation et explications en français ; « Écran : », « Criteria: » et les numéros inchangés |
 | 14 | Page Accueil : les titres sont bien hiérarchisés. | **Aucune ligne** : une observation conforme ne donne pas de ligne (le C se pose dans la grille) |
@@ -27,8 +27,8 @@ Les critères attendus sont ceux de RUXAWEB (agent Observation -> RUXAWEB). L'ag
 - Le bloc de lignes est un bloc de code, en premier, jamais omis.
 - Lignes au format `élément | observation | critères` (ou `observation | critères` sans élément), sans statut en tête.
 - Observations en anglais (sauf cas 13), sans citations ni liens vers le fichier.
-- Critères en numéros seuls dans les lignes, uniquement parmi les 59 de RUXAWEB et BP1 à BP3.
-- Coller la réponse entière dans RUXAWEB (vue Observation, « Coller des observations », puis « Importer les observations ») : autant de pistes que de lignes, aucune piste créée par les explications.
+- Critères en numéros seuls dans les lignes, uniquement parmi les 59 de RUXAWeb et BP1 à BP3.
+- Coller la réponse entière dans RUXAWeb (vue Observation, « Coller des observations », puis « Importer les observations ») : autant de pistes que de lignes, aucune piste créée par les explications.
 
 ## Agent [A11Y] Observation -> RAWeb
 
