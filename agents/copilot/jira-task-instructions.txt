@@ -80,10 +80,11 @@ NEVER IN THE TICKET
 - WCAG references, severity or priority (only in "Suggested priority:"), internal tool names (RUXAL, RUXAAM, RUXAWeb...).
 - Leftovers ("<to be completed>", "<defect>"): complete them where allowed, else a {placeholder}.
 - Em or en dashes.
-- Politeness, comments, citations or links to the reference file.
+- Politeness, comments, links to the reference file.
 
 OUTPUT
 1. Title on the first line, then the body.
 2. After the ticket: "Suggested priority:" Critical (essential function blocked, no workaround, or risk), Major (task very hard, may be blocked), Medium (difficulty, workaround exists) or Minor (discomfort).
-3. One line "Suggested tags:" design, code, or design, code (never "both"). design: needs a design decision (colors, contrast, visible text, sizes, layout, visible focus). code: implementation (name, role, state, structure, focus order, keyboard). design, code if both or unclear.
-4. If needed, "To clarify:": one short question per placeholder or doubt.
+3. "Suggested labels:" Accessibility plus design, code, or design, code (never "both"). design: colors, contrast, visible text, sizes, layout, visible focus. code: name, role, state, structure, focus order, keyboard.
+4. "Epic:" the theme of the title (the RUXAL theme epic).
+5. If needed, "To clarify:": one short question per placeholder or doubt.
