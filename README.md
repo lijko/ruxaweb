@@ -7,7 +7,7 @@
 - **3 bonnes pratiques** hors RAWeb (taille des cibles, fermeture d'une fenêtre modale, retour du focus), hors taux ;
 - pour les scénarios, **une lecture POUR/UX** qualitative, **exclue du taux**.
 
-Un projet A11Y, trois modules : audit simple (3 à 5 écrans, comme l'audit simplifié du SIP), audit complet (les 136 critères du RAWeb 1.1 sur un échantillon représentatif, tests officiels dans chaque fiche, taux selon la méthodologie du SIP) et scénario, avec un configurateur de fonctions primaires commun au projet. Parcours guidé étape par étape, chaque étape sur tous les écrans (tour à vide, 4 étapes de test, clôture), panneau Parcours toujours au même endroit, observations valables sur plusieurs écrans, retest, import de rapports axe ou Lighthouse. Exports Excel (grille des critères), CSV (import Jira) et JSON.
+Un projet A11Y, trois modules : audit simple (3 à 5 écrans, comme l'audit simplifié du SIP), audit complet (les 136 critères du RAWeb 1.1 sur un échantillon représentatif, tests officiels dans chaque fiche, taux selon la méthodologie du SIP, processus, exemptions et dérogations, rapport d'audit HTML imprimable en PDF) et scénario, avec un configurateur de fonctions primaires commun au projet. Parcours guidé étape par étape, chaque étape sur tous les écrans (tour à vide, 4 étapes de test, clôture), panneau Parcours toujours au même endroit, observations valables sur plusieurs écrans, retest, import de rapports axe ou Lighthouse. Exports Excel (grille des critères), CSV (import Jira) et JSON.
 
 L'audit simple est un **pré-diagnostic**, pas un audit de conformité. L'audit complet suit la méthodologie de test du SIP, mais reste un outil : l'auditeur est responsable du résultat et de la déclaration d'accessibilité. Il fait partie de la famille RUXAL, avec [RUXAAM](https://github.com/lijko/ruxaam) pour les applications mobiles et [RUXAWeb Tasks](https://github.com/lijko/ruxaweb-tasks) pour le suivi par tickets Jira.
 
@@ -35,6 +35,7 @@ Ouvrir `ruxaweb.html` dans un navigateur. Aucune installation, aucun serveur, au
 - **Sélection des critères** : méthode de contrôle simplifié de l'accessibilité v1.2.1 du SIP, <https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html> (liste des critères ; la grille Excel n'est pas reproduite).
 - **WCAG 2.1 et 2.2, WAI-ARIA Authoring Practices** : © W3C. Les numéros et intitulés des critères de succès viennent du RAWeb ; les textes de RUXAWeb sont originaux.
 - **Heuristiques d'utilisabilité** : Nielsen Norman Group, <https://www.nngroup.com/articles/ten-usability-heuristics/> (questions reformulées par RUXAWeb, texte d'origine non reproduit).
+- **Polices du rapport d'audit** : Plus Jakarta Sans et Lora (Google Fonts, SIL Open Font License), chargées en ligne ; hors ligne, le rapport prend les polices du système.
 - **Échelle de gravité** : noms des quatre niveaux inspirés de l'échelle d'impact de Deque (axe-core, MPL-2.0), aucun code repris.
 - **Assistance IA** : RUXAWeb a été créé avec l'aide de Claude (Anthropic), qui a participé à la conception de l'outil, a généré une grande partie du code et a donné des conseils de conception. Bertrand Kempf définit l'outil, relit et valide chaque modification.
 
