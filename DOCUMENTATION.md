@@ -9,7 +9,7 @@ L'audit se fait **par observations** : l'auditeur note ce qu'il constate, et la 
 Le fichier de travail est un **projet** (« Projet A11Y - nom »). Il contient des onglets, chacun relevant d'un module :
 
 - **Audit simple** : les 53 critères de la sélection SIP, plus les 7 hors sélection et les bonnes pratiques, sur 3 à 5 écrans (par défaut : accueil, écran avec formulaire, écran au contenu particulier), comme l'audit simplifié du SIP. Deux taux : sélection SIP et élargi. Dans RUXAWeb, un écran est une page du site, ou un état de page (fenêtre modale ouverte, étape d'un formulaire).
-- **Audit complet** : les 136 critères du RAWeb 1.1, en vue d'une déclaration d'accessibilité. Affiché « à venir », pas encore disponible.
+- **Audit complet** : les 136 critères du RAWeb 1.1 et les bonnes pratiques, sur un échantillon représentatif (section 11 bis). Un taux, calculé selon la méthodologie du SIP, et l'état de conformité qu'il donne.
 - **Scénario** : un enchaînement d'écrans (achat, souscription), avec la lecture UX/POUR (section 6). Un seul taux : sélection SIP.
 - **Page Projet** (premier onglet de la barre) : nom et support du projet, onglets avec leur état et leur suppression, création d'un onglet par module, et **fonctions primaires** (une fonction ajoutée à la main se supprime sur sa ligne, avec ses observations). Chaque carte d'onglet a son menu d'actions (bouton ⋮ en haut à droite) : Gérer les écrans, Supprimer, qui devient Confirmer au premier clic (Échap ou un clic ailleurs annule) ; dans « Gérer les écrans », la suppression de l'onglet est dans sa carte, avec son nom et son type.
 - **Fonctions primaires** (en-tête ; navigation : navigation principale et menu burger ; fil d'Ariane ; recherche ; fenêtre modale : ouverture et fermeture ; notifications et messages ; pied de page ; et toute fonction ajoutée). Une fonction ne regroupe que des éléments présents sur les mêmes écrans, puisque ses observations valent sur tous ses écrans : le fil d'Ariane, souvent absent de l'accueil, est donc à part. Pas de « formulaire type » : chaque formulaire s'audite sur son écran, un formulaire réellement répété (newsletter) s'ajoute à la main. Un projet enregistré avec l'ancienne liste est mis à jour à l'ouverture : « Menu ou menu burger », « Formulaire type » et « Retour ou fil d'Ariane » disparaissent s'ils n'ont pas servi, sinon ils restent comme fonctions ajoutées, avec leurs observations : elles appartiennent au projet. On les active sur la page Projet (elles s'appliquent alors à tous les écrans de chaque onglet), puis, dans la page des écrans de chaque onglet, on décoche les écrans où elles n'apparaissent pas. Une observation faite sur une fonction vaut sur tous ces écrans, dans tous les onglets ; son retest remet ses critères à NT partout. Pas de score par fonction : un état (« 2 NC (10.7, 7.1) · 5 écrans », « rien à signaler », « pas encore testée »), dans le configurateur et le résumé. Les éléments répétés libres restent possibles en plus.
@@ -130,14 +130,34 @@ Trois bonnes pratiques, signalées « Hors RAWeb » et exclues du taux :
 - **Fermeture d'une fenêtre modale (bp2)** : un bouton visible atteignable au clavier, et la touche Échap.
 - **Retour du focus (bp3)** : à la fermeture d'une fenêtre modale, le focus revient sur l'élément qui l'avait ouverte.
 
+## 11 bis. Audit complet
+- **Critères** : tout le référentiel, chargé depuis le JSON officiel du SIP ([ReferentielAccessibiliteWeb](https://github.com/accessibility-luxembourg/ReferentielAccessibiliteWeb)). Les 60 critères déjà décrits par RUXAWeb gardent leur explication, leur impact et leur gravité ; pour les 76 autres, « Comment vérifier » donne les tests officiels tels quels. Chaque fiche montre aussi les tests officiels, les cas particuliers et les notes techniques.
+- **Échantillon** (méthodologie du SIP) : quand ils existent, accueil, mentions légales, authentification, contact, accessibilité, aide, plan du site, recherche, un écran par service ou usage principal, un document par service, chaque étape d'un processus, les écrans d'aspect ou de contenu différents, plus 10 % d'écrans tirés au hasard. Pas de maximum.
+- **Statut d'un critère** : validé (C) s'il est conforme sur tous les écrans, applicable s'il l'est sur un écran au moins, NA s'il ne l'est nulle part.
+- **Taux** : critères validés / critères applicables, à deux décimales, indisponible tant qu'il reste des NT. Taux par écran dans le résumé.
+- **État de conformité** (modèle européen de déclaration) : totalement conforme (100 %), partiellement conforme (50 % et plus), non conforme (moins de 50 %).
+- **Critères globaux** (12.3, thématiques 14 et 16) : ils portent sur le site entier ; ils peuvent s'évaluer sur un seul écran et rester NA ailleurs, sans effet sur le taux.
+- **Contenus** : quatre contenus s'ajoutent au tableau des écrans (tableau de mise en forme, document à télécharger, outil d'édition, communication en temps réel). Un contenu désactivé met ses critères à NA ; une non-conformité notée sur un critère dont le contenu est désactivé reste NC, signalée « ! », pour rappeler d'activer le contenu.
+- **Non couvert** : la règle des processus (un critère n'est validé sur une étape que s'il l'est sur toutes les étapes du processus), les dérogations et exemptions, et le rapport d'audit au format du SIP. Les noter à part.
+- **Nouvelle version du référentiel** (RAWeb 2, annoncé pour janvier 2027) : voir section 12.
+
 ## 11. Limites
-- Pré-diagnostic : ne produit ni déclaration d'accessibilité ni taux de conformité officiel.
+- Audit simple : pré-diagnostic, sans déclaration d'accessibilité ni taux de conformité officiel.
 - Même sélection de critères que l'audit simplifié du SIP, mais pas son résultat : l'échantillon, l'environnement de test et l'auditeur diffèrent.
 - La méthode du SIP ne couvre pas tout (voir section 4) : l'audit complet du RAWeb reste la référence.
 - Les consignes de test sont des aides de lecture : la méthodologie officielle du RAWeb 1.1 fait foi.
 
 ## 12. Modifier l'outil
 Tout est dans `ruxaweb.html` : les critères et leurs textes se trouvent dans le bloc délimité par `DEBUT_DONNEES` et `FIN_DONNEES`, généré depuis le dépôt de développement (<https://github.com/lijko/ruxal-a11y>). Ne modifiez jamais le numéro, l'intitulé ni le niveau d'un critère officiel.
+
+Le référentiel de l'audit complet est dans le bloc `DEBUT_REFERENTIEL` / `FIN_REFERENTIEL`, généré par `outils/referentiel.py` :
+
+```
+git clone https://github.com/accessibility-luxembourg/ReferentielAccessibiliteWeb
+python3 outils/referentiel.py ReferentielAccessibiliteWeb
+```
+
+Les réglages éditoriaux (thème RUXAL, étape, gravité et contenu déclencheur des critères que RUXAWeb ne décrit pas encore, critères globaux, liens) sont dans `outils/referentiel-raweb-1.1.json`. Pour une nouvelle version : copier ce fichier, changer le nom, le préfixe des identifiants et les liens, relancer le script avec ce fichier en deuxième argument. Intitulés, niveaux et tests viennent toujours du JSON officiel ; un critère dont l'intitulé a changé perd l'explication de RUXAWeb et prend les tests officiels.
 
 ## 13. Les 59 critères (53 de la sélection SIP, 6 hors sélection)
 Intitulés, niveaux et références du RAWeb 1.1 © SIP Luxembourg, CC BY 3.0 LU. Thèmes (regroupement), gravités et étapes : RUXAWeb.
