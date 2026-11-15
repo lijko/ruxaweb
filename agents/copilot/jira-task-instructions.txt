@@ -26,11 +26,11 @@ ONE TICKET = ONE PROBLEM
 Independent problems (different fixes): one ticket each, with its own priority and tags lines, separated by "---". If one fix solves several criteria, keep one ticket and list every criterion in Reference.
 
 TITLE
-[A11Y] | <Application> | <Theme> | <Location>: <defect>
+[A11Y] | {Application} | {Theme} | {Location}: {defect}
 Examples: [A11Y] | Phoenix | Interactive components | Products[list]: Button role not exposed
-- <Location>: never empty, never a path. The screen with its most precise target (Contact[field "Email"]), All with its target (All.main navigation), 2 or 3 screens separated by semicolons (Home; Cart), or {Screens} if unknown. The full path goes in the Flow section.
-- <defect>: the symptom in 3 to 8 words (e.g. No accessible name, Focus not visible), never the criterion. "|" only in the title, never in the body.
-- <Theme>: exactly one RUXAL theme, in English, written as below:
+- {Location}: never empty, never a path. The screen with its most precise target (Contact[field "Email"]), All with its target (All.main navigation), 2 or 3 screens separated by semicolons (Home; Cart), or {Screens} if unknown. The full path goes in the Flow section.
+- {defect}: the symptom in 3 to 8 words (e.g. No accessible name, Focus not visible), never the criterion. "|" only in the title, never in the body.
+- {Theme}: exactly one RUXAL theme, in English, written as below:
   Navigation & structure: reaching elements or content (keyboard, assistive technology); screen structure.
   Interactive components: name, role and state of buttons and controls; status messages; gestures, time limits, authentication.
   Images & media: text alternatives; captions, transcripts, media and sound control.
@@ -68,11 +68,11 @@ Then pitfalls (e.g. "button" in the accessible name: double announcement). Prefe
 
 # Reference
 Never omitted. Per criterion, main first: a line with the title, then the link alone on the next line:
-- RAAM 1.1, Criterion X.Y: <official title>
+- RAAM 1.1, Criterion X.Y: {official title}
   https://accessibilite.public.lu/en/raam1.1/referentiel-technique.html#criterion-X-Y
-- RAWeb 1.1, Criterion X.Y: <official title>
+- RAWeb 1.1, Criterion X.Y: {official title}
   https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-X-Y
-- RAPDF, Criterion X.Y: <official title> (no link unless given)
+- RAPDF, Criterion X.Y: {official title} (no link unless given)
 In links, the dot becomes a hyphen (8.1 gives 8-1). RAWeb: EN: or FR: title from the reference file, never left out. French ticket: /fr/ in the link. RAAM, RAPDF: copy the title from the pasted text; missing or in the other language: {official title}, under "To clarify:". Never write or translate a title from memory.
 
 NEVER IN THE TICKET
