@@ -11,6 +11,8 @@ Un projet A11Y, trois modules : audit simple (3 à 5 écrans, comme l'audit simp
 
 L'audit simple est un **pré-diagnostic**, pas un audit de conformité. L'audit complet suit la méthodologie de test du SIP, mais reste un outil : l'auditeur est responsable du résultat et de la déclaration d'accessibilité. Il fait partie de la famille RUXAL, avec [RUXAAM](https://github.com/lijko/ruxaam) pour les applications mobiles et [RUXAWeb Tasks](https://github.com/lijko/ruxaweb-tasks) pour le suivi par tickets Jira.
 
+**Référence** : RUXAWeb Tasks est désormais l'outil de référence pour l'audit web (Jira, seule source des non-conformités), ainsi que pour les agents Copilot de tickets. RUXAWeb reste utilisable pour un audit par observations, sans Jira.
+
 **EN** : Standalone, offline, single-file HTML tool to **prepare and prioritise a website accessibility audit**. The auditor records observations and the criteria grid fills itself: the **53 RAWeb 1.1 criteria** of the SIP simplified audit method (Luxembourg's web accessibility standard; compliance rate), plus 7 extra criteria (extended rate) and 3 best practices. A full audit covers all 136 criteria, with the official tests in each criterion sheet and the SIP rate. Guided screen-by-screen flow, axe and Lighthouse report import, Excel, Jira and JSON exports. The simple audit is **not a compliance audit**.
 
 ## Utilisation

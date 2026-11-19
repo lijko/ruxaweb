@@ -6,7 +6,7 @@ Trois agents pour **Microsoft 365 Copilot** (Agent Builder), un par usage, à cr
 |---|---|---|---|---|
 | **[A11Y] Observation -> RUXAWeb** | Transforme des notes libres en lignes à coller dans RUXAWeb (« Coller des observations »), puis explique brièvement chaque critère | Les 59 critères et 3 bonnes pratiques de RUXAWeb, inclus dans les instructions | Aucune | [`observation-ruxaweb-instructions.txt`](observation-ruxaweb-instructions.txt) |
 | **[A11Y] Observation -> RAWeb** | Donne les critères RAWeb concernés par une observation, avec leur intitulé officiel et la raison | Les 136 critères du RAWeb 1.1 | Liste des critères | [`observation-raweb-instructions.txt`](observation-raweb-instructions.txt) |
-| **[A11Y] JIRA Task** | Écrit un ticket Jira au format de l'équipe à partir d'une observation, de notes ou d'un ticket existant. Mêmes instructions que « [A11Y] Observation -> Jira Task » de RUXAWeb Tasks : les deux fichiers doivent rester identiques | Les 136 critères du RAWeb 1.1 | Liste des critères | [`jira-task-instructions.txt`](jira-task-instructions.txt) |
+| **[A11Y] JIRA Task** | Écrit un ticket Jira au format de l'équipe à partir d'une observation, de notes ou d'un ticket existant. Copie de « [A11Y] Observation -> Jira Task » de [RUXAWeb Tasks](https://github.com/lijko/ruxaweb-tasks/tree/main/agents/copilot), la référence : toute modification se fait d'abord là-bas, puis est recopiée ici à l'identique | Les 136 critères du RAWeb 1.1 | Liste des critères | [`jira-task-instructions.txt`](jira-task-instructions.txt) |
 
 ## Installer un agent
 
