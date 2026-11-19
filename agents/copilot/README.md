@@ -13,9 +13,9 @@ Trois agents pour **Microsoft 365 Copilot** (Agent Builder), un par usage, à cr
 1. Dans Microsoft 365 Copilot, ouvrir **Agents**, puis **Create agent** (onglet **Configure**).
 2. **Name** et **Description** : recopier ceux du tableau ci-dessous.
 3. **Instructions** : ouvrir le fichier d'instructions de l'agent, cliquer sur « Raw », tout sélectionner, copier, coller. Chaque fichier fait moins de 8 000 caractères, la limite d'Agent Builder.
-4. **Knowledge** (agents RAWeb et JIRA Task seulement) : ajouter le lien de la liste des 136 critères du RAWeb 1.1 :
-   `https://github.com/lijko/ruxaweb/blob/main/raweb-1.1-criteria.txt`
-   Copilot ne consulte pas toujours cette connaissance. L'agent RAWeb remplace un intitulé qu'il ne trouve pas par le numéro seul, signalé sous « To clarify: » ; l'agent JIRA Task ne donne jamais l'intitulé (numéro et lien seulement). Joindre alors le fichier [`raweb-1.1-criteria.txt`](../../raweb-1.1-criteria.txt) à la conversation.
+4. **Knowledge** (agents RAWeb et JIRA Task seulement) : téléverser le fichier [`raweb-1.1-criteria.txt`](../../raweb-1.1-criteria.txt) (les 136 critères du RAWeb 1.1, puis les bonnes pratiques BP1 à BP3). C'est la méthode recommandée : un fichier téléversé est toujours disponible pour l'agent.
+   En secours, le lien public : `https://github.com/lijko/ruxaweb/blob/main/raweb-1.1-criteria.txt`. Copilot ne consulte pas toujours un lien : l'agent RAWeb donne alors le numéro seul, signalé sous « To clarify: ». Joindre le fichier à la conversation règle le problème.
+   Le fichier change (nouvelle version du RAWeb, nouvelle bonne pratique) : le téléverser à nouveau dans chaque agent qui l'utilise, y compris ceux de RUXAWeb Tasks. L'agent JIRA Task ne recopie jamais l'intitulé (numéro et lien seulement) : le fichier lui sert à choisir le critère.
 5. **Suggested prompts** : facultatif, voir ci-dessous.
 6. **Create**, puis tester.
 
@@ -46,6 +46,6 @@ Repasser les cas de [`grille-non-regression.md`](grille-non-regression.md) dans 
 
 ---
 
-**EN**: three Microsoft 365 Copilot agents. Create each one in Agent Builder: copy the Name and Description above and paste the instruction file into Instructions (under the 8,000 character limit). The RAWeb and JIRA Task agents also need the RAWeb 1.1 criteria list as Knowledge (link above); the RUXAWeb agent needs none, its 59 criteria and 3 good practices are in its instructions.
+**EN**: three Microsoft 365 Copilot agents. Create each one in Agent Builder: copy the Name and Description above and paste the instruction file into Instructions (under the 8,000 character limit). The RAWeb and JIRA Task agents also need the RAWeb 1.1 criteria list as Knowledge: upload raweb-1.1-criteria.txt (recommended; the public link above is a fallback, and Copilot does not always read links); the RUXAWeb agent needs none, its 59 criteria and 3 good practices are in its instructions.
 
 Licence : instructions © 2026 Bertrand Kempf, CC BY 4.0. Liste des critères du RAWeb 1.1 : © SIP Luxembourg, CC BY 3.0 LU.
