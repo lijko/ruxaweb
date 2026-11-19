@@ -6,7 +6,7 @@ Trois agents pour **Microsoft 365 Copilot** (Agent Builder), un par usage, à cr
 |---|---|---|---|---|
 | **[A11Y] Observation -> RUXAWeb** | Transforme des notes libres en lignes à coller dans RUXAWeb (« Coller des observations »), puis explique brièvement chaque critère | Les 59 critères et 3 bonnes pratiques de RUXAWeb, inclus dans les instructions | Aucune | [`observation-ruxaweb-instructions.txt`](observation-ruxaweb-instructions.txt) |
 | **[A11Y] Observation -> RAWeb** | Donne les critères RAWeb concernés par une observation, avec leur intitulé officiel et la raison | Les 136 critères du RAWeb 1.1 | Liste des critères | [`observation-raweb-instructions.txt`](observation-raweb-instructions.txt) |
-| **[A11Y] JIRA Task** | Écrit un ticket Jira au format de l'équipe à partir d'une observation, de notes ou d'un ticket existant | Les 136 critères du RAWeb 1.1 | Liste des critères | [`jira-task-instructions.txt`](jira-task-instructions.txt) |
+| **[A11Y] JIRA Task** | Écrit un ticket Jira au format de l'équipe à partir d'une observation, de notes ou d'un ticket existant. Mêmes instructions que « [A11Y] Observation -> Jira Task » de RUXAWeb Tasks : les deux fichiers doivent rester identiques | Les 136 critères du RAWeb 1.1 | Liste des critères | [`jira-task-instructions.txt`](jira-task-instructions.txt) |
 
 ## Installer un agent
 
@@ -15,7 +15,7 @@ Trois agents pour **Microsoft 365 Copilot** (Agent Builder), un par usage, à cr
 3. **Instructions** : ouvrir le fichier d'instructions de l'agent, cliquer sur « Raw », tout sélectionner, copier, coller. Chaque fichier fait moins de 8 000 caractères, la limite d'Agent Builder.
 4. **Knowledge** (agents RAWeb et JIRA Task seulement) : ajouter le lien de la liste des 136 critères du RAWeb 1.1 :
    `https://github.com/lijko/ruxaweb/blob/main/raweb-1.1-criteria.txt`
-   Copilot ne consulte pas toujours cette connaissance. Un intitulé qu'il ne trouve pas est remplacé par le numéro seul, signalé sous « To clarify: ». Joindre alors le fichier [`raweb-1.1-criteria.txt`](../../raweb-1.1-criteria.txt) à la conversation.
+   Copilot ne consulte pas toujours cette connaissance. L'agent RAWeb remplace un intitulé qu'il ne trouve pas par le numéro seul, signalé sous « To clarify: » ; l'agent JIRA Task ne donne jamais l'intitulé (numéro et lien seulement). Joindre alors le fichier [`raweb-1.1-criteria.txt`](../../raweb-1.1-criteria.txt) à la conversation.
 5. **Suggested prompts** : facultatif, voir ci-dessous.
 6. **Create**, puis tester.
 
