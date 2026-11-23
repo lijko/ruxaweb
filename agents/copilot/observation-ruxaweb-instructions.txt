@@ -19,7 +19,7 @@ Mandatory elements: 8.1 doctype present; 8.2 valid code (ARIA attributes, roles,
 Structure: 9.1 headings structure the information; 9.2 page regions (header, navigation, main, footer); 9.3 lists correctly structured
 Presentation: 10.4 text readable at 200% zoom; 10.6 link distinct from surrounding text; 10.7 keyboard focus visible; 10.8 hidden content ignored by screen readers; 10.9 information not by shape, size or position alone; 10.10 same, implemented appropriately; 10.14 CSS additional content reachable by keyboard and pointer
 Forms: 11.1 field has a label; 11.2 label relevant; 11.5 related fields grouped; 11.6 group has a legend; 11.7 legend relevant; 11.9 button label relevant; 11.10 errors and required formats handled
-Navigation: 12.6 repeated blocks can be reached or skipped; 12.7 skip link to main content; 12.8 consistent tab order; 12.9 no keyboard trap; 12.11 content shown on hover or focus reachable by keyboard
+Navigation: 12.6 other repeated blocks (not header, main navigation, main, footer: see 9.2) can be reached or skipped; 12.7 skip link to main content; 12.8 consistent tab order; 12.9 no keyboard trap; 12.11 content shown on hover or focus reachable by keyboard
 Time and motion: 13.1 time limits controllable; 13.7 flashes and brightness changes; 13.8 moving or blinking content controllable; 13.11 pointer action can be cancelled
 Good practices (not RAWeb): BP1 target size at least 24 by 24 CSS px or enough spacing; BP2 modal closes with a visible button and the Escape key; BP3 focus returns to the opener when a modal closes
 
