@@ -24,7 +24,7 @@ Ouvrir `ruxaweb.html` dans un navigateur. Aucune installation, aucun serveur, au
 | `ruxaweb.html` | l'outil |
 | `DOCUMENTATION.md` | observations et taux, sélection des critères, règle « si présent », parcours d'audit, gravités, limites, liste des 59 critères |
 | `donnees-fictives-ruxaweb-v2.0.json` | projet fictif à ouvrir (Fichier, « Ouvrir une sauvegarde ») pour essayer l'outil : boutique en ligne, fonctions primaires, audit simple et scénario d'achat |
-| `raweb-1.1-criteria.txt` | liste des 136 critères du RAWeb 1.1, une ligne par critère : numéro, intitulé officiel anglais (EN:) et français (FR:) ; sert de connaissance aux agents Copilot |
+| `raweb-1.1-criteria.txt` | liste des 136 critères du RAWeb 1.1, une ligne par critère : numéro, intitulé officiel anglais (EN:) et français (FR:), niveau officiel (Level:) et correspondance WCAG du SIP (WCAG:) ; sert de connaissance aux agents Copilot |
 | `outils/` | `referentiel.py` : insère dans l'outil le référentiel de l'audit complet (critères, intitulés, tests officiels) depuis le JSON officiel du SIP ; `referentiel-raweb-1.1.json` : ses réglages (voir DOCUMENTATION, section 12) |
 | `agents/copilot/` | **agents Microsoft 365 Copilot à installer** : « [A11Y] Observation -> RUXAWeb » (notes vers lignes à coller dans RUXAWeb), « [A11Y] Observation -> RAWeb » (critères d'une observation) et « [A11Y] JIRA Task » (ticket Jira) ; instructions et guide d'installation |
 | `LICENSE` | EUPL-1.2 |
