@@ -1,0 +1,426 @@
+```json
+{
+  "format": "ruxaweb-tasks-1",
+  "tickets": [
+    {
+      "key": "SUB-201",
+      "summary": "[A11Y] | Souscription | Interactive components | Personal details[button \"Continue\"]: No accessible name",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-10T09:12:00.000+0100",
+      "priority": "Major",
+      "criteria": [
+        "11.9"
+      ],
+      "lines": [
+        {
+          "screen": "Personal details",
+          "element": "Personal details[button \"Continue\"]",
+          "sip": "Le bouton fléché qui mène à l'étape suivante est restitué « bouton » seulement : son icône n'a pas d'alternative textuelle."
+        }
+      ],
+      "pour": "R",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code",
+        "journey-subscription"
+      ],
+      "epic": "Interactive components",
+      "reco": "Donner au bouton « Continue » un nom accessible qui décrit son action.",
+      "recommendations": [
+        "Give the button an accessible name matching its purpose.",
+        "Prefer a native button."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-202",
+      "summary": "[A11Y] | Souscription | Colors & contrast | All.footer[links]: Insufficient contrast",
+      "status": "open",
+      "jiraStatus": "In Progress",
+      "updated": "2026-11-10T10:30:00.000+0100",
+      "priority": "Medium",
+      "criteria": [
+        "3.2"
+      ],
+      "lines": [
+        {
+          "screen": "All",
+          "element": "All.footer[links]",
+          "sip": "Les liens du pied de page sont gris clair sur fond blanc (contraste d'environ 2.9:1)."
+        }
+      ],
+      "pour": "P",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "design"
+      ],
+      "epic": "Colors & contrast",
+      "reco": "Foncer la couleur des liens du pied de page pour atteindre un contraste d'au moins 4.5:1.",
+      "recommendations": [
+        "Darken the link color."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-203",
+      "summary": "[A11Y] | Souscription | Forms | Personal details[field \"Email\"]: Error not linked to field",
+      "status": "fixed",
+      "jiraStatus": "Done",
+      "updated": "2026-11-12T16:40:00.000+0100",
+      "priority": "Major",
+      "criteria": [
+        "11.10"
+      ],
+      "lines": [
+        {
+          "screen": "Personal details",
+          "element": "Personal details[field \"Email\"] (error)",
+          "sip": "Le message d'erreur du champ « Email » s'affiche sous le champ mais ne lui est pas relié."
+        }
+      ],
+      "pour": "C",
+      "ux": [
+        "N9"
+      ],
+      "labels": [
+        "Accessibility",
+        "code",
+        "journey-subscription"
+      ],
+      "epic": "Forms",
+      "reco": "Relier le message d'erreur au champ « Email » pour qu'il soit annoncé avec lui.",
+      "recommendations": [
+        "Link the error message to the field."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-204",
+      "summary": "[A11Y] | Souscription | Navigation & structure | Payment[dialog \"Billing address\"]: Focus leaves the dialog",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-11T11:05:00.000+0100",
+      "priority": "Critical",
+      "criteria": [
+        "12.8"
+      ],
+      "lines": [
+        {
+          "screen": "Payment",
+          "element": "Payment[dialog \"Billing address\"] (open)",
+          "sip": "Fenêtre « Billing address » ouverte, la touche Tab fait passer le focus sur la page en arrière-plan."
+        }
+      ],
+      "pour": "U",
+      "ux": [
+        "N3"
+      ],
+      "labels": [
+        "Accessibility",
+        "code",
+        "journey-subscription"
+      ],
+      "epic": "Navigation & structure",
+      "reco": "Garder le focus dans la fenêtre « Billing address » tant qu'elle est ouverte.",
+      "recommendations": [
+        "Keep the focus inside the dialog while it is open."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-205",
+      "summary": "[A11Y] | Souscription | Images & media | Home; Offers: Offer banner without text alternative",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-11T14:20:00.000+0100",
+      "priority": "Major",
+      "criteria": [
+        "1.1"
+      ],
+      "lines": [
+        {
+          "screen": "Home",
+          "element": "Home[image \"Spring offer\"]",
+          "sip": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier."
+        },
+        {
+          "screen": "Offers",
+          "element": "Offers[image \"Spring offer\"]",
+          "sip": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier."
+        }
+      ],
+      "pour": "P",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code",
+        "journey-subscription"
+      ],
+      "epic": "Images & media",
+      "reco": "Donner à la bannière « Spring offer » une alternative qui reprend le texte de l'offre.",
+      "recommendations": [
+        "Give the image a text alternative with the offer."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-206",
+      "summary": "[A11Y] | Souscription | Content & readability | Offers[carousel]: Cannot be paused",
+      "status": "open",
+      "jiraStatus": "Done",
+      "updated": "2026-11-09T08:00:00.000+0100",
+      "priority": "Medium",
+      "criteria": [
+        "13.8"
+      ],
+      "lines": [
+        {
+          "screen": "Offers",
+          "element": "Offers[carousel]",
+          "sip": "Le carrousel des offres défile automatiquement sans bouton de pause."
+        }
+      ],
+      "pour": "U",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "design"
+      ],
+      "epic": "Content & readability",
+      "reco": "Ajouter un bouton pour mettre le carrousel en pause.",
+      "recommendations": [
+        "Add a pause control."
+      ],
+      "warnings": [
+        "Closed in Jira (Won't Do), defect still counted."
+      ]
+    },
+    {
+      "key": "SUB-207",
+      "summary": "[A11Y] | Souscription | Images & media | Home[image \"Spring offer\"]: No alt",
+      "status": "rejected",
+      "jiraStatus": "Done",
+      "updated": "2026-11-11T14:25:00.000+0100",
+      "priority": "Major",
+      "criteria": [
+        "1.1"
+      ],
+      "lines": [
+        {
+          "screen": "Home",
+          "element": "Home[image \"Spring offer\"]",
+          "sip": "L'image « Spring offer » n'a pas d'alternative textuelle."
+        }
+      ],
+      "pour": "P",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code"
+      ],
+      "epic": "Images & media",
+      "reco": "Ajouter une alternative textuelle à l'image.",
+      "recommendations": [
+        "Add alt."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-208",
+      "summary": "[A11Y] | Souscription | Navigation & structure | Account[link \"Edit\"]: Link purpose unclear",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-12T09:00:00.000+0100",
+      "priority": "Minor",
+      "criteria": [
+        "6.1"
+      ],
+      "lines": [
+        {
+          "screen": "Account",
+          "element": "Account[link \"Edit\"]",
+          "sip": "Trois liens sont nommés « Edit » sans contexte dans leur intitulé."
+        }
+      ],
+      "pour": "U",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code"
+      ],
+      "epic": "Navigation & structure",
+      "reco": "Rendre chaque lien « Edit » explicite (« Edit address », « Edit email »).",
+      "recommendations": [
+        "Make each link name explicit."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-209",
+      "summary": "[A11Y] | Souscription | Content & readability | Plan details[table \"Price comparison\"]: Headers not associated",
+      "status": "open",
+      "jiraStatus": "In Review",
+      "updated": "2026-11-12T15:10:00.000+0100",
+      "priority": "Medium",
+      "criteria": [
+        "5.7"
+      ],
+      "lines": [
+        {
+          "screen": "Plan details",
+          "element": "Plan details[table \"Price comparison\"]",
+          "sip": "Les en-têtes de colonnes du tableau « Price comparison » sont des cellules mises en forme : le lecteur d'écran lit les prix sans le nom de la formule."
+        }
+      ],
+      "pour": "P",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code",
+        "journey-subscription"
+      ],
+      "epic": "Content & readability",
+      "reco": "Déclarer les en-têtes de colonnes du tableau « Price comparison » comme en-têtes.",
+      "recommendations": [
+        "Mark the header cells as headers."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-210",
+      "summary": "[A11Y] | Souscription | Forms | Personal details[field \"Postal code\"]: Purpose not identified",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-12T15:30:00.000+0100",
+      "priority": "Medium",
+      "criteria": [
+        "11.13"
+      ],
+      "lines": [
+        {
+          "screen": "Personal details",
+          "element": "Personal details[field \"Postal code\"]",
+          "sip": "Le navigateur ne propose pas le remplissage automatique du champ « Postal code » : sa finalité n'est pas identifiée."
+        }
+      ],
+      "pour": "P",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code",
+        "journey-subscription"
+      ],
+      "epic": "Forms",
+      "reco": "Identifier la finalité du champ « Postal code » pour permettre le remplissage automatique.",
+      "recommendations": [
+        "Identify the purpose of the field."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-211",
+      "summary": "[A11Y] | Souscription | Navigation & structure | Personal details: No progress indicator",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-13T09:45:00.000+0100",
+      "priority": "Medium",
+      "criteria": [],
+      "lines": [
+        {
+          "screen": "Personal details",
+          "element": "Personal details",
+          "sip": "La souscription compte quatre étapes mais rien n'indique l'étape en cours ni le nombre d'étapes restantes."
+        }
+      ],
+      "pour": "C",
+      "ux": [
+        "N1"
+      ],
+      "labels": [
+        "Accessibility",
+        "design",
+        "journey-subscription"
+      ],
+      "epic": "Navigation & structure",
+      "reco": "Afficher l'étape en cours et le nombre d'étapes de la souscription.",
+      "recommendations": [
+        "Show the current step and the total."
+      ],
+      "warnings": [
+        "No RAWeb criterion: usability issue only."
+      ]
+    },
+    {
+      "key": "SUB-213",
+      "summary": "[A11Y] | Souscription | Navigation & structure | Offers[link \"Compare offers\"]: Focus not visible",
+      "status": "open",
+      "jiraStatus": "To Do",
+      "updated": "2026-11-13T11:00:00.000+0100",
+      "priority": "Major",
+      "criteria": [
+        "10.7"
+      ],
+      "lines": [
+        {
+          "screen": "Offers",
+          "element": "Offers[link \"Compare offers\"]",
+          "sip": "Au clavier, le lien « Compare offers » n'affiche aucun indicateur de focus."
+        }
+      ],
+      "pour": "U",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "design",
+        "journey-subscription"
+      ],
+      "epic": "Navigation & structure",
+      "reco": "Rendre visible le focus du lien « Compare offers ».",
+      "recommendations": [
+        "Show a visible focus indicator."
+      ],
+      "warnings": []
+    },
+    {
+      "key": "SUB-214",
+      "summary": "[A11Y] | Souscription | Navigation & structure | All.header[link \"Skip to content\"]: Link missing",
+      "status": "fixed",
+      "jiraStatus": "Done",
+      "updated": "2026-11-13T17:20:00.000+0100",
+      "priority": "Major",
+      "criteria": [
+        "12.7"
+      ],
+      "lines": [
+        {
+          "screen": "All",
+          "element": "All.header",
+          "sip": "Aucun lien d'évitement : l'utilisateur au clavier traverse les 25 liens du menu sur chaque écran."
+        }
+      ],
+      "pour": "U",
+      "ux": [],
+      "labels": [
+        "Accessibility",
+        "code"
+      ],
+      "epic": "Navigation & structure",
+      "reco": "Ajouter un lien d'évitement « Skip to content » en premier dans la page.",
+      "recommendations": [
+        "Add a skip link."
+      ],
+      "warnings": []
+    }
+  ],
+  "skipped": [
+    {
+      "key": "SUB-212",
+      "reason": "Not an accessibility ticket."
+    }
+  ]
+}
+```
+13 tickets converted, 1 skipped, 1 with warnings.

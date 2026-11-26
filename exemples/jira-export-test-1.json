@@ -1,0 +1,518 @@
+{
+ "issues": [
+  {
+   "id": "10201",
+   "key": "SUB-201",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Interactive components | Personal details[button \"Continue\"]: No accessible name",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Major"
+    },
+    "updated": "2026-11-10T09:12:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nOffers -> Personal details\nPersonal details[button \"Continue\"]\n\nh1. Actual behavior / Impact\nThe screen reader announces \"button\" only on the arrow button that goes to the next step. The icon has no text alternative.\nImpact: screen reader users cannot know what the button does.\n\nh1. Expected behavior\n\"Continue, button\".\n\nh1. Recommendations\n- Give the button an accessible name matching its purpose.\n- Prefer a native button.\n\nh1. Reference\n- RAWeb 1.1, Criterion 11.9: In each form, is the label of each button relevant (excluding special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-11-9",
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-11",
+     "fields": {
+      "summary": "Interactive components"
+     }
+    }
+   }
+  },
+  {
+   "id": "10202",
+   "key": "SUB-202",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Colors & contrast | All.footer[links]: Insufficient contrast",
+    "status": {
+     "name": "In Progress",
+     "statusCategory": {
+      "key": "indeterminate"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Medium"
+    },
+    "updated": "2026-11-10T10:30:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nAll.footer[links]\n\nh1. Actual behavior / Impact\nThe footer links are light grey on white (ratio about 2.9:1).\nImpact: low vision users cannot read the links.\n\nh1. Expected behavior\nText contrast of at least 4.5:1.\n\nh1. Recommendations\n- Darken the link color.\n\nh1. Reference\n- RAWeb 1.1, Criterion 3.2: On each web page, is the contrast between the colour of the text and the colour of its background sufficiently high (excluding special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-3-2",
+    "labels": [
+     "Accessibility",
+     "design"
+    ],
+    "parent": {
+     "key": "SUB-13",
+     "fields": {
+      "summary": "Colors & contrast"
+     }
+    }
+   }
+  },
+  {
+   "id": "10203",
+   "key": "SUB-203",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Forms | Personal details[field \"Email\"]: Error not linked to field",
+    "status": {
+     "name": "Done",
+     "statusCategory": {
+      "key": "done"
+     }
+    },
+    "resolution": {
+     "name": "Done"
+    },
+    "priority": {
+     "name": "Major"
+    },
+    "updated": "2026-11-12T16:40:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nOffers -> Personal details\nPersonal details[field \"Email\"] (error)\n\nh1. Actual behavior / Impact\nAfter continuing with an invalid email, the error message appears under the field but is not linked to it. The screen reader does not announce it on the field.\nImpact: screen reader users do not know why they cannot continue.\n\nh1. Expected behavior\nThe error is announced with the field.\n\nh1. Recommendations\n- Link the error message to the field.\n\nh1. Reference\n- RAWeb 1.1, Criterion 11.10: In each form, is the error management used appropriately (excluding special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-11-10",
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-15",
+     "fields": {
+      "summary": "Forms"
+     }
+    }
+   }
+  },
+  {
+   "id": "10204",
+   "key": "SUB-204",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Navigation & structure | Payment[dialog \"Billing address\"]: Focus leaves the dialog",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Critical"
+    },
+    "updated": "2026-11-11T11:05:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nPersonal details -> Payment\nPayment[dialog \"Billing address\"] (open)\n\nh1. Actual behavior / Impact\nWith the dialog open, Tab moves the focus to the page behind the dialog.\nImpact: keyboard users lose the dialog and cannot finish the subscription.\n\nh1. Expected behavior\nFocus stays in the dialog until it closes.\n\nh1. Recommendations\n- Keep the focus inside the dialog while it is open.\n\nh1. Reference\n- RAWeb 1.1, Criterion 12.8: On each web page, is the navigation sequence consistent?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-12-8",
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-10",
+     "fields": {
+      "summary": "Navigation & structure"
+     }
+    }
+   }
+  },
+  {
+   "id": "10205",
+   "key": "SUB-205",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Images & media | Home; Offers: Offer banner without text alternative",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Major"
+    },
+    "updated": "2026-11-11T14:20:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nHome[image \"Spring offer\"]\nOffers[image \"Spring offer\"]\n\nh1. Actual behavior / Impact\nThe offer banner has no text alternative. The screen reader reads the file name \"banner_v3_final.jpg\".\nImpact: blind users miss the discount on the first months.\n\nh1. Expected behavior\nThe alternative gives the offer text.\n\nh1. Recommendations\n- Give the image a text alternative with the offer.\n\nh1. Reference\n- RAWeb 1.1, Criterion 1.1: Does each image conveying information have a text alternative?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-1-1",
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-12",
+     "fields": {
+      "summary": "Images & media"
+     }
+    }
+   }
+  },
+  {
+   "id": "10206",
+   "key": "SUB-206",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Content & readability | Offers[carousel]: Cannot be paused",
+    "status": {
+     "name": "Done",
+     "statusCategory": {
+      "key": "done"
+     }
+    },
+    "resolution": {
+     "name": "Won't Do"
+    },
+    "priority": {
+     "name": "Medium"
+    },
+    "updated": "2026-11-09T08:00:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nOffers[carousel]\n\nh1. Actual behavior / Impact\nThe offers carousel scrolls automatically with no pause button.\nImpact: users with attention disorders are distracted.\n\nh1. Expected behavior\nA pause button.\n\nh1. Recommendations\n- Add a pause control.\n\nh1. Reference\n- RAWeb 1.1, Criterion 13.8: On each web page, is every moving or blinking content controllable by the user (excluding special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-13-8",
+    "labels": [
+     "Accessibility",
+     "design"
+    ],
+    "parent": {
+     "key": "SUB-14",
+     "fields": {
+      "summary": "Content & readability"
+     }
+    }
+   }
+  },
+  {
+   "id": "10207",
+   "key": "SUB-207",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Images & media | Home[image \"Spring offer\"]: No alt",
+    "status": {
+     "name": "Done",
+     "statusCategory": {
+      "key": "done"
+     }
+    },
+    "resolution": {
+     "name": "Duplicate"
+    },
+    "priority": {
+     "name": "Major"
+    },
+    "updated": "2026-11-11T14:25:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nHome[image \"Spring offer\"]\n\nh1. Actual behavior / Impact\nImage without alternative.\nImpact: blind users miss the information.\n\nh1. Expected behavior\nAlternative text.\n\nh1. Recommendations\n- Add alt.\n\nh1. Reference\n- RAWeb 1.1, Criterion 1.1: Does each image conveying information have a text alternative?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-1-1",
+    "labels": [
+     "Accessibility",
+     "code"
+    ],
+    "parent": {
+     "key": "SUB-12",
+     "fields": {
+      "summary": "Images & media"
+     }
+    }
+   }
+  },
+  {
+   "id": "10208",
+   "key": "SUB-208",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Navigation & structure | Account[link \"Edit\"]: Link purpose unclear",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Minor"
+    },
+    "updated": "2026-11-12T09:00:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nAccount[link \"Edit\"]\n\nh1. Actual behavior / Impact\nThree links are named \"Edit\" with no context in their name.\nImpact: screen reader users listing links cannot tell them apart.\n\nh1. Expected behavior\n\"Edit address\", \"Edit email\"...\n\nh1. Recommendations\n- Make each link name explicit.\n\nh1. Reference\n- RAWeb 1.1, Criterion 6.1: Is every link explicit (except in special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-6-1",
+    "labels": [
+     "Accessibility",
+     "code"
+    ],
+    "parent": {
+     "key": "SUB-10",
+     "fields": {
+      "summary": "Navigation & structure"
+     }
+    }
+   }
+  },
+  {
+   "id": "10209",
+   "key": "SUB-209",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Content & readability | Plan details[table \"Price comparison\"]: Headers not associated",
+    "status": {
+     "name": "In Review",
+     "statusCategory": {
+      "key": "indeterminate"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Medium"
+    },
+    "updated": "2026-11-12T15:10:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nPlan details[table \"Price comparison\"]\n\nh1. Actual behavior / Impact\nThe column headers are styled cells, not headers. The screen reader reads the prices without the plan name.\nImpact: screen reader users cannot tell which price belongs to which plan.\n\nh1. Expected behavior\nEach cell announced with its header.\n\nh1. Recommendations\n- Mark the header cells as headers.\n\nh1. Reference\n- RAWeb 1.1, Criterion 5.7: For each data table, is the appropriate technique used to associate each cell with its headers (excluding special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-5-7",
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-14",
+     "fields": {
+      "summary": "Content & readability"
+     }
+    }
+   }
+  },
+  {
+   "id": "10210",
+   "key": "SUB-210",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Forms | Personal details[field \"Postal code\"]: Purpose not identified",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Medium"
+    },
+    "updated": "2026-11-12T15:30:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nPersonal details[field \"Postal code\"]\n\nh1. Actual behavior / Impact\nThe browser does not offer autofill for the postal code field: its purpose is not identified.\nImpact: users with motor or cognitive disabilities must type everything.\n\nh1. Expected behavior\nAutofill available.\n\nh1. Recommendations\n- Identify the purpose of the field.\n\nh1. Reference\n- RAWeb 1.1, Criterion 11.13: Can the purpose of an input field be identified to facilitate the automatic filling of fields with user data?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-11-13",
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-15",
+     "fields": {
+      "summary": "Forms"
+     }
+    }
+   }
+  },
+  {
+   "id": "10211",
+   "key": "SUB-211",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Navigation & structure | Personal details: No progress indicator",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Medium"
+    },
+    "updated": "2026-11-13T09:45:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nOffers -> Personal details -> Payment -> Confirmation\nPersonal details\n\nh1. Actual behavior / Impact\nThe subscription has four steps but nothing shows the current step or how many remain.\nImpact: users with cognitive disabilities do not know where they are in the subscription.\n\nh1. Expected behavior\nA step indicator: \"Step 2 of 4\".\n\nh1. Recommendations\n- Show the current step and the total.\n\nh1. Reference\nNo RAWeb criterion: usability issue.",
+    "labels": [
+     "Accessibility",
+     "design",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-10",
+     "fields": {
+      "summary": "Navigation & structure"
+     }
+    }
+   }
+  },
+  {
+   "id": "10212",
+   "key": "SUB-212",
+   "fields": {
+    "summary": "Update payment provider SDK to 4.2",
+    "status": {
+     "name": "In Progress",
+     "statusCategory": {
+      "key": "indeterminate"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "High"
+    },
+    "updated": "2026-11-13T10:00:00.000+0100",
+    "description": "Upgrade the SDK before the end of the sprint.",
+    "labels": [
+     "backend"
+    ]
+   }
+  },
+  {
+   "id": "10213",
+   "key": "SUB-213",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Navigation & structure | Offers[link \"Compare offers\"]: Focus not visible",
+    "status": {
+     "name": "To Do",
+     "statusCategory": {
+      "key": "new"
+     }
+    },
+    "resolution": null,
+    "priority": {
+     "name": "Major"
+    },
+    "updated": "2026-11-13T11:00:00.000+0100",
+    "description": {
+     "type": "doc",
+     "version": 1,
+     "content": [
+      {
+       "type": "heading",
+       "attrs": {
+        "level": 1
+       },
+       "content": [
+        {
+         "type": "text",
+         "text": "Flow(s) / Screen(s) / Element(s) in concern"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "content": [
+        {
+         "type": "text",
+         "text": "Offers[link \"Compare offers\"]"
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "attrs": {
+        "level": 1
+       },
+       "content": [
+        {
+         "type": "text",
+         "text": "Actual behavior / Impact"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "content": [
+        {
+         "type": "text",
+         "text": "With the keyboard, the \"Compare offers\" link shows no focus indicator."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "content": [
+        {
+         "type": "text",
+         "text": "Impact: keyboard users do not know where they are."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "attrs": {
+        "level": 1
+       },
+       "content": [
+        {
+         "type": "text",
+         "text": "Recommendations"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "content": [
+        {
+         "type": "text",
+         "text": "- Show a visible focus indicator."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "attrs": {
+        "level": 1
+       },
+       "content": [
+        {
+         "type": "text",
+         "text": "Reference"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "content": [
+        {
+         "type": "text",
+         "text": "RAWeb 1.1, Criterion 10.7: On each web page, for each element receiving keyboard focus, is the focus visible?"
+        }
+       ]
+      }
+     ]
+    },
+    "labels": [
+     "Accessibility",
+     "design",
+     "journey-subscription"
+    ],
+    "parent": {
+     "key": "SUB-10",
+     "fields": {
+      "summary": "Navigation & structure"
+     }
+    }
+   }
+  },
+  {
+   "id": "10214",
+   "key": "SUB-214",
+   "fields": {
+    "summary": "[A11Y] | Souscription | Navigation & structure | All.header[link \"Skip to content\"]: Link missing",
+    "status": {
+     "name": "Done",
+     "statusCategory": {
+      "key": "done"
+     }
+    },
+    "resolution": {
+     "name": "Done"
+    },
+    "priority": {
+     "name": "Major"
+    },
+    "updated": "2026-11-13T17:20:00.000+0100",
+    "description": "h1. Flow(s) / Screen(s) / Element(s) in concern\nAll.header\n\nh1. Actual behavior / Impact\nThere is no skip link: the keyboard user goes through the 25 menu links on every screen.\nImpact: keyboard users waste time on every screen.\n\nh1. Expected behavior\nA \"Skip to content\" link first in the page.\n\nh1. Recommendations\n- Add a skip link.\n\nh1. Reference\n- RAWeb 1.1, Criterion 12.7: On each web page, is there a bypass or skip link to the main content region (excluding special cases)?\n  https://accessibilite.public.lu/en/raweb1.1/criteres.html#crit-12-7",
+    "labels": [
+     "Accessibility",
+     "code"
+    ],
+    "parent": {
+     "key": "SUB-10",
+     "fields": {
+      "summary": "Navigation & structure"
+     }
+    }
+   }
+  }
+ ],
+ "isLast": true
+}

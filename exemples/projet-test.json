@@ -1,0 +1,1051 @@
+{
+ "v": 2,
+ "auditNom": "Souscription",
+ "support": "desktop",
+ "onglets": [
+  {
+   "id": "mwj016pkarnu0",
+   "nom": "Audit SIP",
+   "type": "rapide",
+   "ecrans": [
+    {
+     "id": "mwj016pk42dl9",
+     "nom": "Home",
+     "contenus": {},
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pkkoz0f",
+     "nom": "Offers",
+     "contenus": {},
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pkyez63",
+     "nom": "Personal details",
+     "contenus": {
+      "formulaire": true
+     },
+     "etapes": {}
+    }
+   ],
+   "obs": [
+    {
+     "id": "j-SUB-201-0",
+     "n": 1,
+     "ecran": "mwj016pkyez63",
+     "etape": "jira",
+     "texte": "Le bouton fléché qui mène à l'étape suivante est restitué « bouton » seulement : son icône n'a pas d'alternative textuelle.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-9"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Personal details[button \"Continue\"]",
+     "jira": "SUB-201"
+    },
+    {
+     "id": "j-SUB-202-0",
+     "n": 2,
+     "ecran": "mwj016pk42dl9",
+     "etape": "jira",
+     "texte": "Les liens du pied de page sont gris clair sur fond blanc (contraste d'environ 2.9:1).",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-3-2"
+     ],
+     "tag": "nc",
+     "partage": {
+      "ecrans": [
+       "mwj016pkkoz0f",
+       "mwj016pkyez63"
+      ]
+     },
+     "elementNom": "All.footer[links]",
+     "jira": "SUB-202"
+    },
+    {
+     "id": "j-SUB-203-0",
+     "n": 3,
+     "ecran": "mwj016pkyez63",
+     "etape": "jira",
+     "texte": "Le message d'erreur du champ « Email » s'affiche sous le champ mais ne lui est pas relié.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-10"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Personal details[field \"Email\"] (error)",
+     "jira": "SUB-203"
+    },
+    {
+     "id": "j-SUB-203-0-r-mwj016pkyez63",
+     "n": 4,
+     "ecran": "mwj016pkyez63",
+     "etape": "jira",
+     "texte": "Ticket SUB-203 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-10"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-203"
+    },
+    {
+     "id": "j-SUB-205-0",
+     "n": 6,
+     "ecran": "mwj016pk42dl9",
+     "etape": "jira",
+     "texte": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-1-1"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Home[image \"Spring offer\"]",
+     "jira": "SUB-205"
+    },
+    {
+     "id": "j-SUB-205-1",
+     "n": 6,
+     "ecran": "mwj016pkkoz0f",
+     "etape": "jira",
+     "texte": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-1-1"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Offers[image \"Spring offer\"]",
+     "jira": "SUB-205"
+    },
+    {
+     "id": "j-SUB-210-0",
+     "n": 11,
+     "ecran": "mwj016pkyez63",
+     "etape": "jira",
+     "texte": "Le navigateur ne propose pas le remplissage automatique du champ « Postal code » : sa finalité n'est pas identifiée.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-13"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Personal details[field \"Postal code\"]",
+     "jira": "SUB-210"
+    },
+    {
+     "id": "j-SUB-213-0",
+     "n": 13,
+     "ecran": "mwj016pkkoz0f",
+     "etape": "jira",
+     "texte": "Au clavier, le lien « Compare offers » n'affiche aucun indicateur de focus.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-10-7"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Offers[link \"Compare offers\"]",
+     "jira": "SUB-213"
+    },
+    {
+     "id": "j-SUB-214-0",
+     "n": 14,
+     "ecran": "mwj016pk42dl9",
+     "etape": "jira",
+     "texte": "Aucun lien d'évitement : l'utilisateur au clavier traverse les 25 liens du menu sur chaque écran.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nc",
+     "partage": {
+      "ecrans": [
+       "mwj016pkkoz0f",
+       "mwj016pkyez63"
+      ]
+     },
+     "elementNom": "All.header",
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pk42dl9",
+     "n": 15,
+     "ecran": "mwj016pk42dl9",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pkkoz0f",
+     "n": 15,
+     "ecran": "mwj016pkkoz0f",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pkyez63",
+     "n": 15,
+     "ecran": "mwj016pkyez63",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    }
+   ],
+   "valide": false,
+   "fonctionsEcrans": {},
+   "sip": {
+    "site": "souscription-demo.example",
+    "urls": {
+     "mwj016pk42dl9": "https://souscription-demo.example/",
+     "mwj016pkkoz0f": "https://souscription-demo.example/offers",
+     "mwj016pkyez63": "https://souscription-demo.example/personal-details"
+    }
+   }
+  },
+  {
+   "id": "mwj016pkrsnxg",
+   "nom": "Parcours de souscription",
+   "type": "scenario",
+   "ecrans": [
+    {
+     "id": "mwj016pk1epea",
+     "nom": "Home",
+     "contenus": {},
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pk0vioe",
+     "nom": "Offers",
+     "contenus": {},
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pkw53cf",
+     "nom": "Plan details",
+     "contenus": {
+      "tableau-donnees": true
+     },
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pk0jewi",
+     "nom": "Personal details",
+     "contenus": {
+      "formulaire": true
+     },
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pkibe36",
+     "nom": "Payment",
+     "contenus": {
+      "formulaire": true
+     },
+     "etapes": {}
+    },
+    {
+     "id": "mwj016pktiaj1",
+     "nom": "Confirmation",
+     "contenus": {},
+     "etapes": {}
+    }
+   ],
+   "obs": [
+    {
+     "id": "j-SUB-201-0",
+     "n": 1,
+     "ecran": "mwj016pk0jewi",
+     "etape": "jira",
+     "texte": "Le bouton fléché qui mène à l'étape suivante est restitué « bouton » seulement : son icône n'a pas d'alternative textuelle.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-9"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Personal details[button \"Continue\"]",
+     "jira": "SUB-201"
+    },
+    {
+     "id": "j-SUB-202-0",
+     "n": 2,
+     "ecran": "mwj016pk1epea",
+     "etape": "jira",
+     "texte": "Les liens du pied de page sont gris clair sur fond blanc (contraste d'environ 2.9:1).",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-3-2"
+     ],
+     "tag": "nc",
+     "partage": {
+      "ecrans": [
+       "mwj016pk0vioe",
+       "mwj016pkw53cf",
+       "mwj016pk0jewi",
+       "mwj016pkibe36",
+       "mwj016pktiaj1"
+      ]
+     },
+     "elementNom": "All.footer[links]",
+     "jira": "SUB-202"
+    },
+    {
+     "id": "j-SUB-203-0",
+     "n": 3,
+     "ecran": "mwj016pk0jewi",
+     "etape": "jira",
+     "texte": "Le message d'erreur du champ « Email » s'affiche sous le champ mais ne lui est pas relié.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-10"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Personal details[field \"Email\"] (error)",
+     "jira": "SUB-203"
+    },
+    {
+     "id": "j-SUB-203-0-r-mwj016pk0jewi",
+     "n": 4,
+     "ecran": "mwj016pk0jewi",
+     "etape": "jira",
+     "texte": "Ticket SUB-203 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-10"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-203"
+    },
+    {
+     "id": "j-SUB-204-0",
+     "n": 5,
+     "ecran": "mwj016pkibe36",
+     "etape": "jira",
+     "texte": "Fenêtre « Billing address » ouverte, la touche Tab fait passer le focus sur la page en arrière-plan.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-8"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Payment[dialog \"Billing address\"] (open)",
+     "jira": "SUB-204"
+    },
+    {
+     "id": "j-SUB-205-0",
+     "n": 6,
+     "ecran": "mwj016pk1epea",
+     "etape": "jira",
+     "texte": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-1-1"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Home[image \"Spring offer\"]",
+     "jira": "SUB-205"
+    },
+    {
+     "id": "j-SUB-205-1",
+     "n": 6,
+     "ecran": "mwj016pk0vioe",
+     "etape": "jira",
+     "texte": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-1-1"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Offers[image \"Spring offer\"]",
+     "jira": "SUB-205"
+    },
+    {
+     "id": "j-SUB-209-0",
+     "n": 10,
+     "ecran": "mwj016pkw53cf",
+     "etape": "jira",
+     "texte": "Les en-têtes de colonnes du tableau « Price comparison » sont des cellules mises en forme : le lecteur d'écran lit les prix sans le nom de la formule.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-5-7"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Plan details[table \"Price comparison\"]",
+     "jira": "SUB-209"
+    },
+    {
+     "id": "j-SUB-210-0",
+     "n": 11,
+     "ecran": "mwj016pk0jewi",
+     "etape": "jira",
+     "texte": "Le navigateur ne propose pas le remplissage automatique du champ « Postal code » : sa finalité n'est pas identifiée.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-11-13"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Personal details[field \"Postal code\"]",
+     "jira": "SUB-210"
+    },
+    {
+     "id": "j-SUB-213-0",
+     "n": 13,
+     "ecran": "mwj016pk0vioe",
+     "etape": "jira",
+     "texte": "Au clavier, le lien « Compare offers » n'affiche aucun indicateur de focus.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-10-7"
+     ],
+     "tag": "nc",
+     "partage": null,
+     "elementNom": "Offers[link \"Compare offers\"]",
+     "jira": "SUB-213"
+    },
+    {
+     "id": "j-SUB-214-0",
+     "n": 14,
+     "ecran": "mwj016pk1epea",
+     "etape": "jira",
+     "texte": "Aucun lien d'évitement : l'utilisateur au clavier traverse les 25 liens du menu sur chaque écran.",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nc",
+     "partage": {
+      "ecrans": [
+       "mwj016pk0vioe",
+       "mwj016pkw53cf",
+       "mwj016pk0jewi",
+       "mwj016pkibe36",
+       "mwj016pktiaj1"
+      ]
+     },
+     "elementNom": "All.header",
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pk1epea",
+     "n": 15,
+     "ecran": "mwj016pk1epea",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pk0vioe",
+     "n": 15,
+     "ecran": "mwj016pk0vioe",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pkw53cf",
+     "n": 15,
+     "ecran": "mwj016pkw53cf",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pk0jewi",
+     "n": 15,
+     "ecran": "mwj016pk0jewi",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pkibe36",
+     "n": 15,
+     "ecran": "mwj016pkibe36",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    },
+    {
+     "id": "j-SUB-214-0-r-mwj016pktiaj1",
+     "n": 15,
+     "ecran": "mwj016pktiaj1",
+     "etape": "jira",
+     "texte": "Ticket SUB-214 corrigé : à retester",
+     "attendu": "",
+     "point": "",
+     "criteres": [
+      "raweb-12-7"
+     ],
+     "tag": "nt",
+     "partage": null,
+     "jira": "SUB-214"
+    }
+   ],
+   "valide": false,
+   "fonctionsEcrans": {}
+  }
+ ],
+ "vue": "projet",
+ "ongletId": null,
+ "ecranId": null,
+ "etape": "vide",
+ "compteur": 15,
+ "exportesJira": [],
+ "jira": {
+  "tickets": {
+   "SUB-201": {
+    "cle": "SUB-201",
+    "titre": "[A11Y] | Souscription | Interactive components | Personal details[button \"Continue\"]: No accessible name",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-10T09:12:00.000+0100",
+    "priorite": "Major",
+    "criteres": [
+     "11.9"
+    ],
+    "lignes": [
+     {
+      "ecran": "Personal details",
+      "element": "Personal details[button \"Continue\"]",
+      "sip": "Le bouton fléché qui mène à l'étape suivante est restitué « bouton » seulement : son icône n'a pas d'alternative textuelle."
+     }
+    ],
+    "pour": "R",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Interactive components",
+    "reco": "Donner au bouton « Continue » un nom accessible qui décrit son action.",
+    "recoEn": [
+     "Give the button an accessible name matching its purpose.",
+     "Prefer a native button."
+    ],
+    "n": 1,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-202": {
+    "cle": "SUB-202",
+    "titre": "[A11Y] | Souscription | Colors & contrast | All.footer[links]: Insufficient contrast",
+    "statut": "ouvert",
+    "statutJira": "In Progress",
+    "maj": "2026-11-10T10:30:00.000+0100",
+    "priorite": "Medium",
+    "criteres": [
+     "3.2"
+    ],
+    "lignes": [
+     {
+      "ecran": "All",
+      "element": "All.footer[links]",
+      "sip": "Les liens du pied de page sont gris clair sur fond blanc (contraste d'environ 2.9:1)."
+     }
+    ],
+    "pour": "P",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "design"
+    ],
+    "alertes": [],
+    "epic": "Colors & contrast",
+    "reco": "Foncer la couleur des liens du pied de page pour atteindre un contraste d'au moins 4.5:1.",
+    "recoEn": [
+     "Darken the link color."
+    ],
+    "n": 2,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-203": {
+    "cle": "SUB-203",
+    "titre": "[A11Y] | Souscription | Forms | Personal details[field \"Email\"]: Error not linked to field",
+    "statut": "corrige",
+    "statutJira": "Done",
+    "maj": "2026-11-12T16:40:00.000+0100",
+    "priorite": "Major",
+    "criteres": [
+     "11.10"
+    ],
+    "lignes": [
+     {
+      "ecran": "Personal details",
+      "element": "Personal details[field \"Email\"] (error)",
+      "sip": "Le message d'erreur du champ « Email » s'affiche sous le champ mais ne lui est pas relié."
+     }
+    ],
+    "pour": "C",
+    "ux": [
+     "N9"
+    ],
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Forms",
+    "reco": "Relier le message d'erreur au champ « Email » pour qu'il soit annoncé avec lui.",
+    "recoEn": [
+     "Link the error message to the field."
+    ],
+    "n": 3,
+    "nFix": 4,
+    "absent": false
+   },
+   "SUB-204": {
+    "cle": "SUB-204",
+    "titre": "[A11Y] | Souscription | Navigation & structure | Payment[dialog \"Billing address\"]: Focus leaves the dialog",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-11T11:05:00.000+0100",
+    "priorite": "Critical",
+    "criteres": [
+     "12.8"
+    ],
+    "lignes": [
+     {
+      "ecran": "Payment",
+      "element": "Payment[dialog \"Billing address\"] (open)",
+      "sip": "Fenêtre « Billing address » ouverte, la touche Tab fait passer le focus sur la page en arrière-plan."
+     }
+    ],
+    "pour": "U",
+    "ux": [
+     "N3"
+    ],
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Navigation & structure",
+    "reco": "Garder le focus dans la fenêtre « Billing address » tant qu'elle est ouverte.",
+    "recoEn": [
+     "Keep the focus inside the dialog while it is open."
+    ],
+    "n": 5,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-205": {
+    "cle": "SUB-205",
+    "titre": "[A11Y] | Souscription | Images & media | Home; Offers: Offer banner without text alternative",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-11T14:20:00.000+0100",
+    "priorite": "Major",
+    "criteres": [
+     "1.1"
+    ],
+    "lignes": [
+     {
+      "ecran": "Home",
+      "element": "Home[image \"Spring offer\"]",
+      "sip": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier."
+     },
+     {
+      "ecran": "Offers",
+      "element": "Offers[image \"Spring offer\"]",
+      "sip": "La bannière « Spring offer » n'a pas d'alternative textuelle : le lecteur d'écran lit le nom du fichier."
+     }
+    ],
+    "pour": "P",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Images & media",
+    "reco": "Donner à la bannière « Spring offer » une alternative qui reprend le texte de l'offre.",
+    "recoEn": [
+     "Give the image a text alternative with the offer."
+    ],
+    "n": 6,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-206": {
+    "cle": "SUB-206",
+    "titre": "[A11Y] | Souscription | Content & readability | Offers[carousel]: Cannot be paused",
+    "statut": "rejete",
+    "statutJira": "Done",
+    "maj": "2026-11-09T08:00:00.000+0100",
+    "priorite": "Medium",
+    "criteres": [
+     "13.8"
+    ],
+    "lignes": [
+     {
+      "ecran": "Offers",
+      "element": "Offers[carousel]",
+      "sip": "Le carrousel des offres défile automatiquement sans bouton de pause."
+     }
+    ],
+    "pour": "U",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "design"
+    ],
+    "alertes": [],
+    "epic": "Content & readability",
+    "reco": "Ajouter un bouton pour mettre le carrousel en pause.",
+    "recoEn": [
+     "Add a pause control."
+    ],
+    "n": 7,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-207": {
+    "cle": "SUB-207",
+    "titre": "[A11Y] | Souscription | Images & media | Home[image \"Spring offer\"]: No alt",
+    "statut": "rejete",
+    "statutJira": "Done",
+    "maj": "2026-11-11T14:25:00.000+0100",
+    "priorite": "Major",
+    "criteres": [
+     "1.1"
+    ],
+    "lignes": [
+     {
+      "ecran": "Home",
+      "element": "Home[image \"Spring offer\"]",
+      "sip": "L'image « Spring offer » n'a pas d'alternative textuelle."
+     }
+    ],
+    "pour": "P",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code"
+    ],
+    "alertes": [],
+    "epic": "Images & media",
+    "reco": "Ajouter une alternative textuelle à l'image.",
+    "recoEn": [
+     "Add alt."
+    ],
+    "n": 8,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-208": {
+    "cle": "SUB-208",
+    "titre": "[A11Y] | Souscription | Navigation & structure | Account[link \"Edit\"]: Link purpose unclear",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-12T09:00:00.000+0100",
+    "priorite": "Minor",
+    "criteres": [
+     "6.1"
+    ],
+    "lignes": [
+     {
+      "ecran": "Account",
+      "element": "Account[link \"Edit\"]",
+      "sip": "Trois liens sont nommés « Edit » sans contexte dans leur intitulé."
+     }
+    ],
+    "pour": "U",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code"
+    ],
+    "alertes": [],
+    "epic": "Navigation & structure",
+    "reco": "Rendre chaque lien « Edit » explicite (« Edit address », « Edit email »).",
+    "recoEn": [
+     "Make each link name explicit."
+    ],
+    "n": 9,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-209": {
+    "cle": "SUB-209",
+    "titre": "[A11Y] | Souscription | Content & readability | Plan details[table \"Price comparison\"]: Headers not associated",
+    "statut": "ouvert",
+    "statutJira": "In Review",
+    "maj": "2026-11-12T15:10:00.000+0100",
+    "priorite": "Medium",
+    "criteres": [
+     "5.7"
+    ],
+    "lignes": [
+     {
+      "ecran": "Plan details",
+      "element": "Plan details[table \"Price comparison\"]",
+      "sip": "Les en-têtes de colonnes du tableau « Price comparison » sont des cellules mises en forme : le lecteur d'écran lit les prix sans le nom de la formule."
+     }
+    ],
+    "pour": "P",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Content & readability",
+    "reco": "Déclarer les en-têtes de colonnes du tableau « Price comparison » comme en-têtes.",
+    "recoEn": [
+     "Mark the header cells as headers."
+    ],
+    "n": 10,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-210": {
+    "cle": "SUB-210",
+    "titre": "[A11Y] | Souscription | Forms | Personal details[field \"Postal code\"]: Purpose not identified",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-12T15:30:00.000+0100",
+    "priorite": "Medium",
+    "criteres": [
+     "11.13"
+    ],
+    "lignes": [
+     {
+      "ecran": "Personal details",
+      "element": "Personal details[field \"Postal code\"]",
+      "sip": "Le navigateur ne propose pas le remplissage automatique du champ « Postal code » : sa finalité n'est pas identifiée."
+     }
+    ],
+    "pour": "P",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Forms",
+    "reco": "Identifier la finalité du champ « Postal code » pour permettre le remplissage automatique.",
+    "recoEn": [
+     "Identify the purpose of the field."
+    ],
+    "n": 11,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-211": {
+    "cle": "SUB-211",
+    "titre": "[A11Y] | Souscription | Navigation & structure | Personal details: No progress indicator",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-13T09:45:00.000+0100",
+    "priorite": "Medium",
+    "criteres": [],
+    "lignes": [
+     {
+      "ecran": "Personal details",
+      "element": "Personal details",
+      "sip": "La souscription compte quatre étapes mais rien n'indique l'étape en cours ni le nombre d'étapes restantes."
+     }
+    ],
+    "pour": "C",
+    "ux": [
+     "N1"
+    ],
+    "labels": [
+     "Accessibility",
+     "design",
+     "journey-subscription"
+    ],
+    "alertes": [
+     "No RAWeb criterion: usability issue only."
+    ],
+    "epic": "Navigation & structure",
+    "reco": "Afficher l'étape en cours et le nombre d'étapes de la souscription.",
+    "recoEn": [
+     "Show the current step and the total."
+    ],
+    "n": 12,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-213": {
+    "cle": "SUB-213",
+    "titre": "[A11Y] | Souscription | Navigation & structure | Offers[link \"Compare offers\"]: Focus not visible",
+    "statut": "ouvert",
+    "statutJira": "To Do",
+    "maj": "2026-11-13T11:00:00.000+0100",
+    "priorite": "Major",
+    "criteres": [
+     "10.7"
+    ],
+    "lignes": [
+     {
+      "ecran": "Offers",
+      "element": "Offers[link \"Compare offers\"]",
+      "sip": "Au clavier, le lien « Compare offers » n'affiche aucun indicateur de focus."
+     }
+    ],
+    "pour": "U",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "design",
+     "journey-subscription"
+    ],
+    "alertes": [],
+    "epic": "Navigation & structure",
+    "reco": "Rendre visible le focus du lien « Compare offers ».",
+    "recoEn": [
+     "Show a visible focus indicator."
+    ],
+    "n": 13,
+    "nFix": 0,
+    "absent": false
+   },
+   "SUB-214": {
+    "cle": "SUB-214",
+    "titre": "[A11Y] | Souscription | Navigation & structure | All.header[link \"Skip to content\"]: Link missing",
+    "statut": "corrige",
+    "statutJira": "Done",
+    "maj": "2026-11-13T17:20:00.000+0100",
+    "priorite": "Major",
+    "criteres": [
+     "12.7"
+    ],
+    "lignes": [
+     {
+      "ecran": "All",
+      "element": "All.header",
+      "sip": "Aucun lien d'évitement : l'utilisateur au clavier traverse les 25 liens du menu sur chaque écran."
+     }
+    ],
+    "pour": "U",
+    "ux": [],
+    "labels": [
+     "Accessibility",
+     "code"
+    ],
+    "alertes": [],
+    "epic": "Navigation & structure",
+    "reco": "Ajouter un lien d'évitement « Skip to content » en premier dans la page.",
+    "recoEn": [
+     "Add a skip link."
+    ],
+    "n": 14,
+    "nFix": 15,
+    "absent": false
+   }
+  },
+  "imports": [
+   {
+    "date": 1794817557560,
+    "source": "agent",
+    "recus": 13,
+    "ajoutes": 13,
+    "maj": 0,
+    "absents": 0,
+    "ignores": 1
+   }
+  ],
+  "base": "https://souscription-demo.atlassian.net",
+  "jql": "project = SUB AND labels = Accessibility"
+ },
+ "obsF": []
+}

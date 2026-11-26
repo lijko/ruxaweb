@@ -1,0 +1,231 @@
+{
+ "testEngine": {
+  "name": "axe-core",
+  "version": "4.10.2"
+ },
+ "testRunner": {
+  "name": "axe"
+ },
+ "url": "https://souscription-demo.example/",
+ "timestamp": "2026-11-14T09:00:00.000Z",
+ "violations": [
+  {
+   "id": "image-alt",
+   "impact": "critical",
+   "tags": [
+    "cat.text-alternatives",
+    "wcag2a",
+    "wcag111"
+   ],
+   "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+   "help": "Images must have alternative text",
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/image-alt",
+   "nodes": [
+    {
+     "target": [
+      ".hero > img"
+     ],
+     "html": "<img src=\"/img/banner_v3_final.jpg\" class=\"hero-img\">",
+     "failureSummary": "Fix any of the following: Element does not have an alt attribute",
+     "impact": null
+    }
+   ]
+  },
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "cat.color",
+    "wcag2aa",
+    "wcag143"
+   ],
+   "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+   "help": "Elements must meet minimum color contrast ratio thresholds",
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast",
+   "nodes": [
+    {
+     "target": [
+      "footer .links > li:nth-child(1) > a"
+     ],
+     "html": "<a href=\"/p1\">Link 1</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(2) > a"
+     ],
+     "html": "<a href=\"/p2\">Link 2</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(3) > a"
+     ],
+     "html": "<a href=\"/p3\">Link 3</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(4) > a"
+     ],
+     "html": "<a href=\"/p4\">Link 4</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(5) > a"
+     ],
+     "html": "<a href=\"/p5\">Link 5</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(6) > a"
+     ],
+     "html": "<a href=\"/p6\">Link 6</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(7) > a"
+     ],
+     "html": "<a href=\"/p7\">Link 7</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(8) > a"
+     ],
+     "html": "<a href=\"/p8\">Link 8</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(9) > a"
+     ],
+     "html": "<a href=\"/p9\">Link 9</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(10) > a"
+     ],
+     "html": "<a href=\"/p10\">Link 10</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(11) > a"
+     ],
+     "html": "<a href=\"/p11\">Link 11</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      "footer .links > li:nth-child(12) > a"
+     ],
+     "html": "<a href=\"/p12\">Link 12</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #a3a3a3, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+     "impact": null
+    },
+    {
+     "target": [
+      ".promo > .btn-light"
+     ],
+     "html": "<a class=\"btn-light\" href=\"/offers\">See the offer</a>",
+     "failureSummary": "Fix any of the following: Element has insufficient color contrast of 3.1 (foreground color: #ffffff, background color: #e0832f, font size: 12pt (16px), font weight: bold). Expected contrast ratio of 4.5:1",
+     "impact": null
+    }
+   ]
+  },
+  {
+   "id": "link-name",
+   "impact": "serious",
+   "tags": [
+    "cat.name-role-value",
+    "wcag2a",
+    "wcag244",
+    "wcag412"
+   ],
+   "description": "Ensure links have discernible text",
+   "help": "Links must have discernible text",
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name",
+   "nodes": [
+    {
+     "target": [
+      "header .social > a:nth-child(1)"
+     ],
+     "html": "<a href=\"https://x.example\"><svg class=\"ico-x\"></svg></a>",
+     "failureSummary": "Fix all of the following: Element is in tab order and does not have accessible text",
+     "impact": null
+    },
+    {
+     "target": [
+      "header .social > a:nth-child(2)"
+     ],
+     "html": "<a href=\"https://in.example\"><svg class=\"ico-in\"></svg></a>",
+     "failureSummary": "Fix all of the following: Element is in tab order and does not have accessible text",
+     "impact": null
+    }
+   ]
+  },
+  {
+   "id": "heading-order",
+   "impact": "moderate",
+   "tags": [
+    "cat.semantics",
+    "best-practice"
+   ],
+   "description": "Ensure the order of headings is semantically correct",
+   "help": "Heading levels should only increase by one",
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order",
+   "nodes": [
+    {
+     "target": [
+      ".featured > h4"
+     ],
+     "html": "<h4>Featured plans</h4>",
+     "failureSummary": "Fix any of the following: Heading order invalid",
+     "impact": null
+    }
+   ]
+  }
+ ],
+ "incomplete": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "cat.color",
+    "wcag2aa",
+    "wcag143"
+   ],
+   "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+   "help": "Elements must meet minimum color contrast ratio thresholds",
+   "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast",
+   "nodes": [
+    {
+     "target": [
+      ".hero > .hero-title"
+     ],
+     "html": "<h1 class=\"hero-title\">Spring offer</h1>",
+     "failureSummary": "Element's background color could not be determined due to a background image",
+     "impact": null
+    }
+   ]
+  }
+ ],
+ "passes": [],
+ "inapplicable": []
+}

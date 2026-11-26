@@ -1,51 +1,50 @@
-# Agents Copilot pour RUXAWeb
+# Agents pour RUXAWeb
 
-Trois agents pour **Microsoft 365 Copilot** (Agent Builder), un par usage, à créer une fois et à réutiliser. Ils acceptent des notes en français ou en anglais et répondent en anglais, sauf si vous demandez explicitement le français (« en français »).
+Deux agents, à créer une fois. Leurs instructions sont agnostiques : écrites pour **Microsoft 365 Copilot** (Agent Builder, 8 000 caractères au plus), elles fonctionnent dans tout assistant qui accepte des instructions et un fichier de connaissance. Ils acceptent le français et l'anglais et répondent en anglais par défaut.
 
-| Agent | Ce qu'il fait | Critères couverts | Connaissance | Instructions |
-|---|---|---|---|---|
-| **[A11Y] Observation -> RUXAWeb** | Transforme des notes libres en lignes à coller dans RUXAWeb (« Coller des observations »), puis explique brièvement chaque critère | Les 59 critères et 3 bonnes pratiques de RUXAWeb, inclus dans les instructions | Aucune | [`observation-ruxaweb-instructions.txt`](observation-ruxaweb-instructions.txt) |
-| **[A11Y] Observation -> RAWeb** | Donne les critères RAWeb concernés par une observation, avec leur intitulé officiel et la raison. Copie de l'agent de [RUXAWeb Tasks](https://github.com/lijko/ruxaweb-tasks/tree/main/agents/copilot), la référence : modifier d'abord là-bas, puis recopier ici à l'identique | Les 136 critères du RAWeb 1.1 | Liste des critères | [`observation-raweb-instructions.txt`](observation-raweb-instructions.txt) |
-| **[A11Y] JIRA Task** | Écrit un ticket Jira au format de l'équipe à partir d'une observation, de notes ou d'un ticket existant. Copie de « [A11Y] Observation -> Jira Task » de [RUXAWeb Tasks](https://github.com/lijko/ruxaweb-tasks/tree/main/agents/copilot), la référence : toute modification se fait d'abord là-bas, puis est recopiée ici à l'identique | Les 136 critères du RAWeb 1.1 | Liste des critères | [`jira-task-instructions.txt`](jira-task-instructions.txt) |
+| Agent | Ce qu'il fait | Instructions |
+|---|---|---|
+| **[A11Y] Obs. -> Jira & RAWeb** | D'une observation, de notes ou d'un ticket existant : un ticket Jira au format de l'équipe (par défaut), les critères RAWeb seuls (« raweb »), ou un fichier à importer dans RUXAWeb (« json », mode autonome). **Référence** : ce fichier fait foi | [`A11Y-Obs-to-Jira-and-RAWeb.txt`](A11Y-Obs-to-Jira-and-RAWeb.txt) |
+| **[A11Y] Jira -> RUXAWeb** | Mode Jira : lit l'export CSV de Jira et rend le fichier d'import de RUXAWeb, avec un commentaire SIP en français par écran | [`A11Y-Jira-to-RUXAWeb.txt`](A11Y-Jira-to-RUXAWeb.txt) |
+
+L'agent Obs. -> Jira & RAWeb remplace depuis le 26 novembre 2026 les agents « Observation -> Jira Task » et « Observation -> RAWeb ». L'agent « axe -> Jira Tasks » est retiré : les non-conformités axe viennent de Playwright (a11y-tests). Les copies des anciennes consignes dans RUXAL sont à mettre à jour (celles de RUXAWeb 2 sont archivées avec lui).
 
 ## Installer un agent
 
-1. Dans Microsoft 365 Copilot, ouvrir **Agents**, puis **Create agent** (onglet **Configure**).
-2. **Name** et **Description** : recopier ceux du tableau ci-dessous.
-3. **Instructions** : ouvrir le fichier d'instructions de l'agent, cliquer sur « Raw », tout sélectionner, copier, coller. Chaque fichier fait moins de 8 000 caractères, la limite d'Agent Builder.
-4. **Knowledge** (agents RAWeb et JIRA Task seulement) : téléverser le fichier [`raweb-1.1-criteria.txt`](../../raweb-1.1-criteria.txt) (les 136 critères du RAWeb 1.1, puis les bonnes pratiques BP1 à BP3). C'est la méthode recommandée : un fichier téléversé est toujours disponible pour l'agent.
-   En secours, le lien public : `https://github.com/lijko/ruxaweb/blob/main/raweb-1.1-criteria.txt`. Copilot ne consulte pas toujours un lien : l'agent RAWeb donne alors le numéro seul, signalé sous « To clarify: ». Joindre le fichier à la conversation règle le problème.
-   Le fichier change (nouvelle version du RAWeb, nouvelle bonne pratique) : le téléverser à nouveau dans chaque agent qui l'utilise, y compris ceux de RUXAWeb Tasks. L'agent JIRA Task ne recopie jamais l'intitulé (numéro et lien seulement) : le fichier lui sert à choisir le critère.
-5. **Suggested prompts** : facultatif, voir ci-dessous.
-6. **Create**, puis tester.
+1. Microsoft 365 Copilot, **Agents**, **Create agent**, onglet **Configure** (ou l'équivalent de l'assistant utilisé).
+2. **Name** et **Description** : voir le tableau ci-dessous.
+3. **Instructions** : ouvrir le fichier, « Raw », tout copier, coller.
+4. **Knowledge** (agent Obs. -> Jira & RAWeb) : téléverser [`raweb-1.1-criteria.txt`](../../raweb-1.1-criteria.txt) (les critères du RAWeb 1.1, puis les bonnes pratiques BP1 à BP3). En secours, le lien public : `https://github.com/lijko/ruxaweb/blob/main/raweb-1.1-criteria.txt`. Le fichier change : le téléverser à nouveau.
+5. **Create**, puis tester avec le jeu de données de [`../../exemples/`](../../exemples/).
 
 | | Name | Description | Suggested prompts |
 |---|---|---|---|
-| RUXAWeb | `[A11Y] Observation -> RUXAWeb` | `Turns accessibility notes into lines to paste into RUXAWeb, with RAWeb 1.1 criteria.` | `Convert my notes` · `lines only` |
-| RAWeb | `[A11Y] Observation -> RAWeb` | `Lists the RAWeb 1.1 criteria concerned by an accessibility observation.` | `Which criteria apply?` |
-| JIRA | `[A11Y] JIRA Task` | `Writes an accessibility Jira ticket in the team format from an observation or notes.` | `Write a ticket from this observation` · `Reformat this ticket` |
+| Observation | `[A11Y] Obs. -> Jira & RAWeb` | `Turns an accessibility observation into a Jira ticket in the team format, or into a RUXAWeb import file.` | `Write a ticket from this observation` · `raweb` · `json` |
+| Import | `[A11Y] Jira -> RUXAWeb` | `Converts a Jira CSV export of accessibility tickets into an import block for RUXAWeb, with French SIP comments.` | `Convert this export` |
 
-## Utiliser l'agent Observation -> RUXAWeb
+## Utiliser l'agent Obs. -> Jira & RAWeb
 
-Coller ses notes dans l'agent, par exemple :
+| Écrire | Obtenir |
+|---|---|
+| l'observation seule | le ticket Jira |
+| l'observation + `raweb` | les critères seuls : numéro, intitulé officiel, raison, et « Also check » pour ce qui dépend de ce que l'agent ne voit pas |
+| l'observation + `json` | le fichier d'import RUXAWeb |
 
-> page Login : la case « Don't ask again on this computer » a un contour trop pâle.
+- **Mode Jira** : coller l'observation. L'agent choisit les critères dans le fichier de connaissance (ou garde ceux donnés), écrit le ticket (rubriques en titre 2), puis propose priorité, labels et epic. À copier dans Jira.
+- **Mode autonome** : coller une ou plusieurs observations et ajouter « json ». L'agent rend le fichier `ruxaweb-observations.json`, à importer dans RUXAWeb ; l'outil attribue les clés `OBS-`. **Pas encore utilisable** : la version 3.43 ignore les tickets sans clé, il faut d'abord développer le mode autonome. Voir [`../../docs/mode-autonome.md`](../../docs/mode-autonome.md).
+- Dans les deux cas, « To clarify: » liste ce qui manque ; c'est l'auditeur qui décide C, NC ou NA.
 
-L'agent rend deux blocs :
+## Utiliser l'agent d'import
 
-1. un **bloc de code** avec les lignes `élément | observation | critères` (défauts seulement) : bouton « Copier » du bloc, puis RUXAWeb, vue Observation, « Coller des observations », « Importer les observations » ;
-2. **Criteria:** chaque critère avec son sujet et la raison, pour vérifier avant de coller.
+1. RUXAWeb, page Projet : **Ouvrir le filtre dans Jira**, puis dans Jira **Exporter**, **CSV (tous les champs)**.
+   Le filtre garde les tickets corrigés (Ready for testing, Ready to deploy in production, In production) pour que le retest soit proposé ; seul Canceled peut en être exclu. L'agent classe lui-même chaque statut.
+2. Ouvrir l'agent, joindre le fichier. Sans fichier, l'agent le demande.
+3. Télécharger le fichier `ruxaweb-import.json` que l'agent propose, puis RUXAWeb, page Projet, **Importer les tickets**. L'agent liste aussi les tickets avec des avertissements, à vérifier avant l'import.
 
-Coller toute la réponse fonctionne aussi : RUXAWeb lit les lignes et ignore les explications. Option : `lines only` pour le bloc de lignes seul. Un défaut hors des critères de RUXAWeb n'est pas forcé dans une ligne : l'agent le signale et renvoie vers l'agent Observation -> RAWeb.
+Sans agent, le fichier de Jira s'importe aussi directement : les commentaires de la grille restent alors en anglais.
 
-Les critères proposés par une IA restent à vérifier par l'auditeur.
+Les bonnes pratiques arrivent dans un ticket par la ligne `Good practice BP1` de Reference ; l'agent d'import les rend en `BP1`.
 
-## Après une modification d'une consigne
+L'agent ne décide d'aucun statut : il lit les tickets et traduit le défaut en une phrase pour la grille SIP. Les commentaires restent à relire.
 
-Repasser les cas de [`grille-non-regression.md`](grille-non-regression.md) dans Copilot avant de publier la nouvelle version.
-
----
-
-**EN**: three Microsoft 365 Copilot agents. Create each one in Agent Builder: copy the Name and Description above and paste the instruction file into Instructions (under the 8,000 character limit). The RAWeb and JIRA Task agents also need the RAWeb 1.1 criteria list as Knowledge: upload raweb-1.1-criteria.txt (recommended; the public link above is a fallback, and Copilot does not always read links); the RUXAWeb agent needs none, its 59 criteria and 3 good practices are in its instructions.
-
-Licence : instructions © 2026 Bertrand Kempf, CC BY 4.0. Liste des critères du RAWeb 1.1 : © SIP Luxembourg, CC BY 3.0 LU.
+Licence : instructions © 2026 Bertrand Kempf, CC BY 4.0.
